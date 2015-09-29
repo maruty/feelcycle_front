@@ -50,7 +50,7 @@
                         <h3 class="panel-title">Feel Analytics会員登録</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" method="post" action="./regist_controller.php" >
                             <fieldset>
                                 <p>Feel Analytics用のログイン情報登録</p>
 
