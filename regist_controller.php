@@ -16,11 +16,11 @@
     $url = $FINAL_URL_STRING."loginId=".$_POST['loginId']."&"
     						."loginPass=".$_POST['loginPass']."&"
     						."nickName=".$_POST['nickName']."&"
-    						."feelcycleLoginId1".$_POST['feelcycleLoginId1']."&"
-    						."feelcycleLoginPass1".$_POST['feelcycleLoginPass1']."&"
-    						."feelcycleLoginId2".$_POST['feelcycleLoginId2']."&"
-    						."feelcycleLoginPass2".$_POST['feelcycleLoginPass2']."&"
-    						."remember".$_POST['remember'];
+    						."feelcycleLoginId1=".$_POST['feelcycleLoginId1']."&"
+    						."feelcycleLoginPass1=".$_POST['feelcycleLoginPass1']."&"
+    						."feelcycleLoginId2=".$_POST['feelcycleLoginId2']."&"
+    						."feelcycleLoginPass2=".$_POST['feelcycleLoginPass2']."&"
+    						."remember=".$_POST['remember'];
 
     echo "<br />";
     echo "<br />";
@@ -41,7 +41,7 @@
 
     echo "<br />";
     echo "<br />";
-	echo "レスポンス確認";
+	echo "レスポンス確認".$response;
 
 	//curl
 	//curl_close($conn);
