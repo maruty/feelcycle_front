@@ -2,7 +2,8 @@
 
     //POSTの受け取り
     var_dump($_POST);
-    echo "出力確認" + $_POST[$loginId];
+    echo "<br />";
+    echo "出力確認" + $_POST['loginId'];
 
 
 
