@@ -1,6 +1,6 @@
 <?php
 
-	$FINAL_URL_STRING = "http://52.69.227.6/apiRegist?";
+	$FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist?";
 
     //POSTの受け取り
     var_dump($_POST);
