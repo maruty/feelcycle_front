@@ -90,7 +90,7 @@
                                 <hr/>
                                 <div class="checkbox">
                                     <label>
-                                        <input name="remember" type="checkbox" value="Remember Me" required>注意事項を理解し登録します
+                                        <input name="remember" type="checkbox" value="1" required>注意事項を理解し登録します
                                     </label>
                                 </div>
 
