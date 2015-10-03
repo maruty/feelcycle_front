@@ -566,7 +566,7 @@ session_start();
 
 </html>
 
-<?php else header("Location: ./index.html"); : ?>
-    
+<?php else : ?>
+    うんこ
         
 <?php endif; ?>
