@@ -1,3 +1,27 @@
+<?php session_start();
+
+//クッキー処理
+if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != "" 
+    && isset($_COOKIE["loginId"]) && $_COOKIE["loginId"] != ""
+    && isset($_COOKIE["loginPass"]) && $_COOKIE["loginPass"] != ""){
+     
+    $_SESSION["loginStatus"] = $_COOKIE["loginStatus"];
+    $_SESSION["loginId"] = $_COOKIE["loginId"];
+    $_SESSION["loginPass"] = $_COOKIE["loginPass"];
+}
+
+if( isset( $_SESSION["loginStatus"]) &&  $_SESSION["loginStatus"] != null
+ && isset( $_SESSION["loginId"]) &&  $_SESSION["loginId"] != null
+ && isset( $_SESSION["loginPass"]) &&  $_SESSION["loginPass"] != null ){
+    header("Location: ./mypage_controller.php");
+}else{
+    session_destroy();//セッション破棄
+    header("Location:./index.php");
+}
+ 
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 

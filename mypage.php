@@ -1,5 +1,14 @@
 <?php 
 session_start();
+//クッキー処理
+if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != "" 
+    && isset($_COOKIE["loginId"]) && $_COOKIE["loginId"] != ""
+    && isset($_COOKIE["loginPass"]) && $_COOKIE["loginPass"] != ""){
+     
+    $_SESSION["loginStatus"] = $_COOKIE["loginStatus"];
+    $_SESSION["loginId"] = $_COOKIE["loginId"];
+    $_SESSION["loginPass"] = $_COOKIE["loginPass"];
+}
 
 //echo "ログインステータス".$_SESSION["loginStatus"];
 ?>
