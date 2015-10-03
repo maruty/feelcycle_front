@@ -16,7 +16,7 @@ if( isset( $_SESSION["loginStatus"]) &&  $_SESSION["loginStatus"] != null
     header("Location: ./mypage_controller.php");
 }else{
     session_destroy();//セッション破棄
-    header("Location:./index.php");
+    //header("Location:./index.php");
 }
  
 
