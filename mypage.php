@@ -1,16 +1,5 @@
-
-<?php 
-session_start();
-
-echo "ここまできました1";
-
-if($_SESSION["loginStatus"] === "true")
-    echo "ここまできました2";
-
-?>
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 
     <meta charset="utf-8">
@@ -49,6 +38,17 @@ if($_SESSION["loginStatus"] === "true")
 </head>
 
 <body>
+<?php 
+session_start();
+
+echo "ここまできました1";
+
+if($_SESSION["loginStatus"] === "true")
+    echo "ここまできました2";
+
+?>
+
+
 
     <div id="wrapper">
 
