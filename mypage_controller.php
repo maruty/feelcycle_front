@@ -35,6 +35,8 @@
         $_SESSION["loginStatus"] = "true";
 
         echo $_SESSION["loginStatus"];
+
+        var_dump($_SESSION);
     
     }
 
