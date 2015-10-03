@@ -3,8 +3,10 @@
 <?php 
 session_start();
 
-echo "ログインステータス".$_SESSION["loginStatus"];
+//echo "ログインステータス".$_SESSION["loginStatus"];
 ?>
+
+<?php if ($_SESSION["loginStatus"] === "true"): ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -567,8 +569,5 @@ echo "ログインステータス".$_SESSION["loginStatus"];
 </body>
 
 </html>
-
-<?php //else : ?>
-    うんこ
-        
-<?php //endif; ?>
+       
+<?php endif; ?>
