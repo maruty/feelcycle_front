@@ -13,7 +13,7 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 if( isset( $_SESSION["loginStatus"]) &&  $_SESSION["loginStatus"] != null
  && isset( $_SESSION["loginId"]) &&  $_SESSION["loginId"] != null
  && isset( $_SESSION["loginPass"]) &&  $_SESSION["loginPass"] != null ){
-    header("Location: ./mypage_controller.php");
+    header("Location: ./mypage.php");
 }else{
     session_destroy();//セッション破棄
     //header("Location:./index.php");
