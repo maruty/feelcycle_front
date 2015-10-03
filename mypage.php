@@ -1,3 +1,5 @@
+ああああああああ
+
 <?php 
 session_start();
 ?>

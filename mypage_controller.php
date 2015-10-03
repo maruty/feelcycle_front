@@ -1,5 +1,4 @@
 <?php
-
     $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/checkUser?";
     //URL組み立て用
     $url = "";
@@ -41,9 +40,5 @@
         header("Location: ./mypage.php");
 
     }
-
-
-    
-
 ?>
 
