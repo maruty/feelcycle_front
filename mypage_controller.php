@@ -17,7 +17,7 @@
     curl_setopt($conn, CURLOPT_URL, $url);
     $response = curl_exec($conn);
 
-    echo $response;
+    //echo $response;
 
     //セッション開始
     session_start();
