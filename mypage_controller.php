@@ -21,32 +21,29 @@
 
     //セッション開始
     session_start();
+    $_SESSION["loginStatus"] = "false";
     //ログイン情報の会員が存在するかの確認
     // $stringにABCが含まれているか
     if (strpos($response, "resultMessage:true") === FALSE)
     {
         // 文字列が無かった場合
         $_SESSION["loginStatus"] = "false";
+
+        //TOPに戻ろうか
         header("Location: ./index.html");
     }
     else
     {
         // 文字列があった場合
         $_SESSION["loginStatus"] = "true";
+        $_SESSION["loginId"] = $_POST['loginId'];
+        $_SESSION["loginPass"] = $_SESSION["loginPass"];
+        header("Location: ./mypage.php");
 
-        echo $_SESSION["loginStatus"];
-
-        var_dump($_SESSION);
-    
     }
 
 
     
-
-
-
-
-
 
 ?>
 
