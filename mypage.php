@@ -1,7 +1,9 @@
 ああああああああ
 
 <?php 
-//session_start();
+session_start();
+
+echo "ログインステータス".$_SESSION["loginStatus"];
 ?>
 <!DOCTYPE html>
 <html lang="ja">
