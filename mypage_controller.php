@@ -6,9 +6,9 @@
     if( $_POST['remember'] === "Remember Me"){
         echo "ここきた";
         var_dump($_SESSION);
-        setcookie("loginStatus", $_SESSION["loginStatus"], time()+3600*24*14);
-        setcookie("loginId", $_SESSION["loginStatus"], time()+3600*24*14);
-        setcookie("loginPass", $_SESSION["loginStatus"], time()+3600*24*14);
+        setcookie("loginStatus", $_POST["loginStatus"], time()+3600*24*14);
+        setcookie("loginId", $_POST["loginStatus"], time()+3600*24*14);
+        setcookie("loginPass", $_POST["loginStatus"], time()+3600*24*14);
         echo "クッキー:" . $_COOKIE["loginStatus"];
     }
 
