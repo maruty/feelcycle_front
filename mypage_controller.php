@@ -1,7 +1,7 @@
 <?php
 
     //クッキーチェックが付いてた場合はここで保存してあげる
-    if( isset($_POST["remember"])  && $_POST['remember'] === "Remember Me"){
+    if( $_POST['remember'] === "Remember Me"){
         setcookie("loginStatus", $_SESSION["loginStatus"], time()+3600*24*14);
         setcookie("loginId", $_SESSION["loginStatus"], time()+3600*24*14);
         setcookie("loginPass", $_SESSION["loginStatus"], time()+3600*24*14);
