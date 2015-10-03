@@ -29,7 +29,7 @@
         $_SESSION["loginStatus"] = "false";
 
         //TOPに戻ろうか
-        header("Location: ./index.html");
+        header("Location: ./index.php");
     }
     else
     {
