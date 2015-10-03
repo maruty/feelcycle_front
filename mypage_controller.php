@@ -6,7 +6,7 @@
     if( $_POST['remember'] === "Remember Me"){
         //echo "ここきた";
         
-        setcookie(name)("loginStatus", $_POST["loginStatus"], time()+3600*24*14);
+        setcookie("loginStatus", $_POST["loginStatus"], time()+3600*24*14);
         setcookie("loginId", $_POST["loginStatus"], time()+3600*24*14);
         setcookie("loginPass", $_POST["loginStatus"], time()+3600*24*14);
         //echo "クッキー:" . $_COOKIE["loginStatus"];
@@ -41,7 +41,7 @@
         $_SESSION["loginStatus"] = "false";
 
         //TOPに戻ろうか
-        //header("Location: ./index.php");
+        header("Location: ./index.php");
     }
     else
     {
@@ -49,7 +49,7 @@
         $_SESSION["loginStatus"] = "true";
         $_SESSION["loginId"] = $_POST['loginId'];
         $_SESSION["loginPass"] = $_SESSION["loginPass"];
-        //header("Location: ./mypage.php");
+        header("Location: ./mypage.php");
 
     }
 ?>
