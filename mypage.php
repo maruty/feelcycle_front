@@ -1,7 +1,7 @@
 ああああああああ
 
 <?php 
-session_start();
+//session_start();
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -46,7 +46,7 @@ session_start();
 
 
 
-<?php if ($_SESSION["loginStatus"] === "true"): ?>
+<?php //if ($_SESSION["loginStatus"] === "true"): ?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -566,7 +566,7 @@ session_start();
 
 </html>
 
-<?php else : ?>
+<?php //else : ?>
     うんこ
         
-<?php endif; ?>
+<?php //endif; ?>
