@@ -1,10 +1,10 @@
 <?php
     //セッション開始
     session_start();
-    var_dump($_POST);
+    //var_dump($_POST);
     //クッキーチェックが付いてた場合はここで保存してあげる
     if( $_POST['remember'] === "Remember Me"){
-        echo "ここきた";
+        //echo "ここきた";
         
         setcookie("loginStatus", $_POST["loginStatus"], time()+3600*24*14);
         setcookie("loginId", $_POST["loginStatus"], time()+3600*24*14);
