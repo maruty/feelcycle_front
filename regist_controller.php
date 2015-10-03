@@ -4,8 +4,8 @@
 
     //POSTの受け取り
     var_dump($_POST);
-    echo "<br />";
-    echo "出力確認".$_POST['loginId'];
+    //echo "<br />";
+    //echo "出力確認".$_POST['loginId'];
 
 
     //URL組み立て用
@@ -22,9 +22,9 @@
     						."feelcycleLoginPass2=".$_POST['feelcycleLoginPass2']."&"
     						."remember=".$_POST['remember'];
 
-    echo "<br />";
-    echo "<br />";
-    echo "URL出力確認：".$url;
+    //echo "<br />";
+    //echo "<br />";
+    //echo "URL出力確認：".$url;
 
 
     //curl初期化
@@ -39,12 +39,14 @@
 	curl_setopt($conn, CURLOPT_URL, $url);
 	$response = curl_exec($conn);
 
-    echo "<br />";
-    echo "<br />";
-	echo "レスポンス確認".$response;
+    //echo "<br />";
+    //echo "<br />";
+	//echo "レスポンス確認".$response;
 
 	//curl
 	//curl_close($conn);
+
+	echo "<p>ユーザー登録が完了しました 本公開までしばらくお待ち下さい</p>";
 
 
 ?>
