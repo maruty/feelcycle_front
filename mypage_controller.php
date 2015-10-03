@@ -1,4 +1,6 @@
 <?php
+    //セッション開始
+    session_start();
 
     //クッキーチェックが付いてた場合はここで保存してあげる
     if( $_POST['remember'] === "Remember Me"){
@@ -29,8 +31,7 @@
 
     //echo $response;
 
-    //セッション開始
-    session_start();
+
     $_SESSION["loginStatus"] = "false";
     //ログイン情報の会員が存在するかの確認
     // $stringにABCが含まれているか
