@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -38,18 +41,10 @@
 </head>
 
 <body>
-<?php 
-session_start();
-
-echo "ここまできました1";
-
-if($_SESSION["loginStatus"] === "true")
-    echo "ここまできました2";
-
-?>
 
 
 
+<?php if ($_SESSION["loginStatus"] === "true"): ?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -569,7 +564,7 @@ if($_SESSION["loginStatus"] === "true")
 
 </html>
 
-<?php 
-    else: 
-        header("Location: ./index.html");
-    endif; ?>
+<?php else header("Location: ./index.html"); : ?>
+    
+        
+<?php endif; ?>
