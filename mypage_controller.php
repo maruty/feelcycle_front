@@ -2,6 +2,7 @@
 
     //クッキーチェックが付いてた場合はここで保存してあげる
     if( $_POST['remember'] === "Remember Me"){
+        echo "ここきた";
         setcookie("loginStatus", $_SESSION["loginStatus"], time()+3600*24*14);
         setcookie("loginId", $_SESSION["loginStatus"], time()+3600*24*14);
         setcookie("loginPass", $_SESSION["loginStatus"], time()+3600*24*14);
@@ -37,7 +38,7 @@
         $_SESSION["loginStatus"] = "false";
 
         //TOPに戻ろうか
-        header("Location: ./index.php");
+        //header("Location: ./index.php");
     }
     else
     {
@@ -45,7 +46,7 @@
         $_SESSION["loginStatus"] = "true";
         $_SESSION["loginId"] = $_POST['loginId'];
         $_SESSION["loginPass"] = $_SESSION["loginPass"];
-        header("Location: ./mypage.php");
+        //header("Location: ./mypage.php");
 
     }
 ?>
