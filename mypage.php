@@ -2,8 +2,10 @@
 <?php 
 session_start();
 
-if($_SESSION["loginStatus"] === "true")
+echo "ここまできました1";
 
+if($_SESSION["loginStatus"] === "true")
+    echo "ここまできました2";
 
 ?>
 <!DOCTYPE html>
