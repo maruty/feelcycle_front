@@ -3,7 +3,7 @@
 	$FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist?";
 
     //POSTの受け取り
-    var_dump($_POST);
+    //var_dump($_POST);
     //echo "<br />";
     //echo "出力確認".$_POST['loginId'];
 
