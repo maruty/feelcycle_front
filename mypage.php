@@ -568,6 +568,7 @@ session_start();
 
 </html>
 
-<?php else header("Location: ./index.html"); : ?>
+<?php else : ?>
+    <p>直アクセスはダメよ</p>
        
 <?php endif; ?>
