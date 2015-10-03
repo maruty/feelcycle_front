@@ -17,7 +17,7 @@
     curl_setopt($conn, CURLOPT_URL, $url);
     $response = curl_exec($conn);
 
-
+    echo $response;
 
 
     //ログイン情報の会員が存在するかの確認
