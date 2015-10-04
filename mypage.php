@@ -51,7 +51,7 @@ echo $output;
 // trueを付けると連想配列として分解して格納してくれます。
 //$obj = json_decode($output, true);
 
-$obj = json_decode( $output , false ) ;
+$obj = json_decode( $output) ;
 
 var_dump($obj);
 
