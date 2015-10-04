@@ -45,10 +45,10 @@ echo $response;
     fwrite($FP,$response);
     fclose($FP);
   }
-  
+
 //json読込
 //$jsonurl = "http://localhost/php/test.json"
-//$json = file_get_contents($jsonurl);
+$json = file_get_contents($"./test.json");
 
 
 
@@ -85,7 +85,7 @@ $output = '[{
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
-$obj = json_decode( $response ,true);
+$obj = json_decode( $json ,true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
