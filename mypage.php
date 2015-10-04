@@ -42,6 +42,7 @@ $output = substr($response, ($coutOffset-20), strlen($response));
 echo "b";
 //$output0 = file_get_contents($output);
 echo "c";
+/*
 $output = '[{
         "instructor": "Mio", 
         "lessonDate": "2015/09/29(火)", 
@@ -60,6 +61,7 @@ $output = '[{
         "lessonTimeFrom": "12:30", 
         "lessonTimeTo": "13:15"
     }]';
+    */
 //$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
 echo "=====文字列出力===========";
