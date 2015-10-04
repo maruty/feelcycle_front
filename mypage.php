@@ -32,14 +32,14 @@ curl_setopt($conn, CURLOPT_HEADER, true);
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
 
-echo $response;
-echo "<br />";
+//echo $response;
+//echo "<br />";
 $coutOffset = strpos($response, "lesson");
 //echo strlen($response); // 6
-echo "coutoffset:".$coutOffset;
+//echo "coutoffset:".$coutOffset;
 
-echo "================";
-echo "<br />";
+//echo "================";
+//echo "<br />";
 $output = substr($response, ($coutOffset-20), strlen($response));
 
 echo $output;
