@@ -45,7 +45,7 @@ $output = substr($response, ($coutOffset-20), strlen($response));
 //echo $output;
 
 // 文字化けするかもしれないのでUTF-8に変換
-$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+//$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
  
 // オブジェクト毎にパース
 // trueを付けると連想配列として分解して格納してくれます。
