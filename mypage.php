@@ -32,8 +32,8 @@ curl_setopt($conn, CURLOPT_HEADER, true);
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
 
-//echo $response;
-
+echo $response;
+echo "<br />";
 $coutOffset = strpos($response, "{\"lesson\"");
 
 echo "coutoffset:".$coutOffset;
