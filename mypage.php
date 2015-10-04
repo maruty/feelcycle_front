@@ -37,8 +37,9 @@ $response = curl_exec($conn);
 $coutOffset = strpos($response, "lesson");
 //echo strlen($response); // 6
 //echo "coutoffset:".$coutOffset;
-
+echo "a";
 $output = substr($response, ($coutOffset-20), strlen($response));
+echo "b";
 $output2 =  mb_convert_encoding($output , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
 echo "================";
