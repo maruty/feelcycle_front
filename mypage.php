@@ -1,6 +1,6 @@
 <?php 
 session_start();
-ini_set('display_errors',1);
+//ini_set('display_errors',1);
 //phpinfo();
 //クッキー処理
 
@@ -533,7 +533,7 @@ echo "=====jsonエラー確認完了===========";
                                     <i class="fa fa-support fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">313</div>
+                                    <div class="huge"><?php echo count(lessonObject); ?></div>
                                     <div>Total Lesson</div>
                                 </div>
                             </div>
@@ -556,7 +556,7 @@ echo "=====jsonエラー確認完了===========";
                                     <i class="fa fa-tasks fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                    <div class="huge">開発中</div>
                                     <div>Monthly Lesson</div>
                                 </div>
                             </div>
