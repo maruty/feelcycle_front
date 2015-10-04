@@ -83,7 +83,7 @@ $response = curl_exec($conn);
 
 
 $response = str_replace(array("\r\n", "\r", "\n"), '', $response );
-
+$response = preg_replace('/(\s|　)/','',$response);
 echo $response;
 
 //いったん書き出し
