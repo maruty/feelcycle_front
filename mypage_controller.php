@@ -40,19 +40,16 @@
     if (strpos($response, "resultMessage:true") === FALSE)
     {
         // 文字列が無かった場合
-        $_SESSION["loginStatus"] = "false";
+        //$_SESSION["loginStatus"] = "false";
 
         //TOPに戻ろうか
         header("Location: ./index.php");
-    }
-    else
-    {
+    }else{
         // 文字列があった場合
         $_SESSION["loginStatus"] = "true";
         $_SESSION["loginId"] = $_POST['loginId'];
-        $_SESSION["loginPass"] = $_SESSION["loginPass"];
+        $_SESSION["loginPass"] = $_POST["loginPass"];
         header("Location: ./mypage.php");
-
     }
 ?>
 
