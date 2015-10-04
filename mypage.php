@@ -87,7 +87,7 @@ $response = curl_exec($conn);
 $response = str_replace(array("\r\n", "\r", "\n"), '', $response );
 $response = preg_replace('/(\s|　)/','',$response);
 mb_language('Japanese');
-$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
+//$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
 
 echo $response;
 
@@ -179,9 +179,9 @@ $output = '[{
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
-//$obj = json_decode( $hoge ,true);
-$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $response ),true); 
-$ary = json_decode(str_replace('&quot;','"',$response ),true);
+$obj = json_decode( $response ,true);
+//$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $response ),true); 
+//$ary = json_decode(str_replace('&quot;','"',$response ),true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
