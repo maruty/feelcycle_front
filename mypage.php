@@ -51,7 +51,12 @@ echo $response;
 //$jsonurl = "http://localhost/php/test.json"
 $json = file_get_contents("./test.json");
 
+var_dump($json );
+
+
 $hoge = mb_convert_encoding($json, "utf8", "auto");
+
+var_dump($hoge);
 /*
 $output = '[{
         "instructor": "Mio", 
