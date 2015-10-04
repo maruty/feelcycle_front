@@ -83,7 +83,8 @@ echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
 //$obj = json_decode( $hoge ,true);
-$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $hoge),true);  
+$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $hoge),true); 
+$ary = json_decode(str_replace('&quot;','"',$hoge),true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
@@ -94,6 +95,7 @@ echo "<br />";
 echo "=====jsonエラー確認完了===========";
 echo "<br />";
 var_dump($obj);
+var_dump($ary);
 
 
 
