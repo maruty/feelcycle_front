@@ -122,14 +122,7 @@ var_dump($ary);
     <meta name="author" content="">
 
     <title>Feel Analytics マイページ</title>
-    <script>
-        $(function(){
-            //$("#test").html("Hello World!")
-            alert("テスト");
-            var obj = $.parseJSON('<?php echo $hoge; ?>');
-            alert(obj);
-        });
-    </script>
+
 
     <!-- Bootstrap Core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -677,6 +670,15 @@ var_dump($ary);
 
     <!-- Custom Theme JavaScript -->
     <script src="./dist/js/sb-admin-2.js"></script>
+
+        <script>
+        $(function(){
+            //$("#test").html("Hello World!")
+            alert("テスト");
+            var obj = $.parseJSON('<?php echo $hoge; ?>');
+            alert(obj);
+        });
+    </script>
 
 </body>
 
