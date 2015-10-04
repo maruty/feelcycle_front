@@ -43,7 +43,7 @@ echo "b";
 $output0 = file_get_contents($output);
 echo "c";
 
-$output2 =  mb_convert_encoding($output , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
 echo "================";
 echo "<br />";
