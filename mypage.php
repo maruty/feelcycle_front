@@ -32,8 +32,13 @@ curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
 
-//echo $response;
-//echo "<br />";
+
+echo "=====response文字列出力===========";
+echo "<br />";
+
+echo $response;
+echo "<br />";
+
 $coutOffset = strpos($response, "lesson");
 //echo strlen($response); // 6
 //echo "coutoffset:".$coutOffset;
