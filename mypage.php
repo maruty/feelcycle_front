@@ -53,6 +53,8 @@ $json = file_get_contents("./test.json");
 
 var_dump($json );
 
+$json = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
+
 
 $hoge = mb_convert_encoding($json, "utf8", "auto");
 
