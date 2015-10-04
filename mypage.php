@@ -212,7 +212,7 @@ echo "=====jsonエラー確認完了===========";
 
 
 
-<?php //if ($_SESSION["loginStatus"] === "true"): ?>
+<?php if ($_SESSION["loginStatus"] === "true"): ?>
     <div id="wrapper">
 
         <!-- Navigation -->
