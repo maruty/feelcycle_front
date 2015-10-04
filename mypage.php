@@ -64,7 +64,7 @@ echo "=====エンコーディング確認======";
 echo "<br />";
 
 /* 現在のdetect_orderで文字エンコーディングを検出 */
-echo mb_detect_encoding($str);
+echo mb_detect_encoding($response);
 echo "<br />";
 
 $fuga = "";
