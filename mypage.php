@@ -60,6 +60,8 @@ echo $output;
 
 $obj = json_decode( $output) ;
 
+echo json_last_error();
+
 var_dump($obj);
 
 
