@@ -48,7 +48,7 @@ echo $response;
 
 //json読込
 //$jsonurl = "http://localhost/php/test.json"
-$json = file_get_contents($"./test.json");
+$json = file_get_contents("./test.json");
 
 
 
