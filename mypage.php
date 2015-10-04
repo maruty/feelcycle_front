@@ -41,7 +41,7 @@ echo "<br />";
 
 //いったん書き出し
 
-
+/*
   if(!$FP = fopen("./test.json","w"))
     echo "error";
 
@@ -49,9 +49,9 @@ echo "<br />";
     fwrite($FP,$response);
     fclose($FP);
   }
-
+*/
 //json読込
-$jsonurl = "http://52.69.227.6/php/test.json"
+$jsonurl = "http://localhost/php/test.json"
 $json = file_get_contents($jsonurl);
 
 
