@@ -39,7 +39,7 @@ $coutOffset = strpos($response, "lesson");
 echo "coutoffset:".$coutOffset;
 
 echo "================";
-
+echo "<br />";
 $output = substr($response, $coutOffset-2, strlen($response));
 
 echo $output;
