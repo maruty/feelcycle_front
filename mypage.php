@@ -56,6 +56,8 @@ echo "json=:" . $json;
 //echo mb_internal_encoding();
 
 $temp = ''.$json.'';
+
+$hoge = mb_convert_encoding($temp, "utf8", "auto");
 /*
 $output = '[{
         "instructor": "Mio", 
