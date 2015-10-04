@@ -44,15 +44,15 @@
         //$_SESSION["loginStatus"] = "false";
 
         //TOPに戻ろうか
-        //header("Location: ./index.php");
+        header("Location: ./index.php");
     }else{
         // 文字列があった場合
         $_SESSION["loginStatus"] = "true";
         $_SESSION["loginId"] = $_POST['loginId'];
         $_SESSION["loginPass"] = $_POST["loginPass"];
 
-        echo "セッション".$_SESSION["loginId"];
-        //header("Location: ./mypage.php");
+        //echo "セッション".$_SESSION["loginId"];
+        header("Location: ./mypage.php");
     }
 ?>
 

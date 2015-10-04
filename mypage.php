@@ -14,25 +14,25 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 */
 
 $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/getLesson?";
-    //URL組み立て用
-    $url = "";
+//URL組み立て用
+$url = "";
 
-    $url = $FINAL_URL_STRING."loginId=".$_POST['loginId']."&"."loginPass=".$_POST['loginPass'];
+$url = $FINAL_URL_STRING."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
 
-    echo "URL:".$url;
+//echo "URL:".$url;
 
-    //curl初期化
-    $conn = curl_init();
+//curl初期化
+$conn = curl_init();
 
-    curl_setopt($conn, CURLOPT_CONNECTTIMEOUT, 2);
-    curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
-    curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($conn, CURLOPT_HEADER, true);
- 
-    curl_setopt($conn, CURLOPT_URL, $url);
-    $response = curl_exec($conn);
+curl_setopt($conn, CURLOPT_CONNECTTIMEOUT, 2);
+curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($conn, CURLOPT_HEADER, true);
 
-    echo $response;
+curl_setopt($conn, CURLOPT_URL, $url);
+$response = curl_exec($conn);
+
+echo $response;
 
 
 
