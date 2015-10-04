@@ -87,7 +87,7 @@ $response = curl_exec($conn);
 $response = str_replace(array("\r\n", "\r", "\n"), '', $response );
 $response = preg_replace('/(\s|　)/','',$response);
 mb_language('Japanese');
-$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
+//$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
 
 echo $response;
 
@@ -111,7 +111,7 @@ echo $response;
 //$json = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
 
 
-$hoge = mb_convert_encoding($response, "utf8", "auto");
+//$hoge = mb_convert_encoding($response, "utf8", "auto");
 
 //$fuga = "'" . $hoge  . "'";
 /*
