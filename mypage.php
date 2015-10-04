@@ -50,6 +50,7 @@ echo $response;
 //$jsonurl = "http://localhost/php/test.json"
 $json = file_get_contents("./test.json");
 
+echo "json=:" . $json;
 
 
 /*
