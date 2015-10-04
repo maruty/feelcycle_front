@@ -34,6 +34,9 @@ curl_setopt($conn, CURLOPT_HEADER, false);
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
 
+
+$response = str_replace(array("\r\n", "\r", "\n"), '', $response );
+
 echo $response;
 
 //いったん書き出し
