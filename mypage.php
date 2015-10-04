@@ -54,7 +54,7 @@ echo $response;
 //$jsonurl = "http://localhost/php/test.json"
 //$json = file_get_contents("./test.json");
 
-var_dump($response);
+//var_dump($response);
 
 //$json = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
 
@@ -62,39 +62,46 @@ var_dump($response);
 $hoge = mb_convert_encoding($response, "utf8", "auto");
 
 //$fuga = "'" . $hoge  . "'";
+/*
 echo "<br />";
 echo "=====エンコーディング確認======";
 echo "<br />";
-
+*/
 /* 現在のdetect_orderで文字エンコーディングを検出 */
+/*
 echo mb_detect_encoding($response);
 echo "<br />";
 
 echo "<br />";
 echo "=====文字列にエスケープシーケンスがある気がするのでそこら辺の確認======";
+*/
+
+/*
 $fuga = "'".$response."'";
 
 echo "<br />";
 echo "fuga:".$fuga;
 
+*/
 //$fuga = "";
 
 //$fuga = $hoge;
 
 
-$moji = mb_substr($fuga, 0, strlen($fuga), "UTF-8");
-
+//$moji = mb_substr($fuga, 0, strlen($fuga), "UTF-8");
+/*
 echo "<br />";
 echo "文字：".$moji;
 echo "<br />";
+*/
 //文字列半角　全角空白削除
 
-$fuga = preg_replace('/(\s|　)/','',$moji);
+//$fuga = preg_replace('/(\s|　)/','',$moji);
 
-$fuga = str_replace(array("\r\n", "\r", "\n"), '', $fuga);
+//$fuga = str_replace(array("\r\n", "\r", "\n"), '', $fuga);
 //$fuga  = mb_convert_encoding($fuga , "EUC-JP", "UTF-8")
 
-var_dump($hoge);
+//var_dump($hoge);
 /*
 $output = '[{
         "instructor": "Mio", 
@@ -121,8 +128,8 @@ echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
 //$obj = json_decode( $hoge ,true);
-$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $fuga ),true); 
-$ary = json_decode(str_replace('&quot;','"',$fuga ),true);
+$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $response ),true); 
+$ary = json_decode(str_replace('&quot;','"',$response ),true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
