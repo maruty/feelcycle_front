@@ -86,7 +86,7 @@ echo "文字：".$moji;
 echo "<br />";
 //文字列半角　全角空白削除
 
-//$fuga = preg_replace('/(\s|　)/','',$hoge);
+$fuga = preg_replace('/(\s|　)/','',$moji);
 
 var_dump($hoge);
 /*
@@ -110,13 +110,13 @@ $output = '[{
     }]';
     */
 
-$moji = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
+//$moji = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
 //$obj = json_decode( $hoge ,true);
-$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $moji ),true); 
-$ary = json_decode(str_replace('&quot;','"',$moji ),true);
+$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $fuga ),true); 
+$ary = json_decode(str_replace('&quot;','"',$fuga ),true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
