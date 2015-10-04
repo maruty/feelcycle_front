@@ -176,12 +176,15 @@ $output = '[{
     */
 
 //$moji = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
+/*
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
 $obj = json_decode( $response ,true);
+*/
 //$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $response ),true); 
 //$ary = json_decode(str_replace('&quot;','"',$response ),true);
+/*
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
@@ -190,9 +193,10 @@ echo "<br />";
 echo json_last_error();
 echo "<br />";
 echo "=====jsonエラー確認完了===========";
-echo "<br />";
-var_dump($obj);
-var_dump($ary);
+
+*///echo "<br />";
+//var_dump($obj);
+//var_dump($ary);
 
 
 
@@ -719,13 +723,17 @@ var_dump($ary);
     <script src="./dist/js/sb-admin-2.js"></script>
 
         <script>
-        $(function(){
+        $(window).load(function () {
             //$("#test").html("Hello World!")
             alert("テスト");
-            var obj = $.parseJSON('<?php echo $hoge; ?>');
+            var obj = $.parseJSON('<?php echo $response; ?>');
             alert(obj);
         });
     </script>
+
+    
+
+
 
 </body>
 
