@@ -93,7 +93,9 @@ $response = str_replace('&#034;', '"', $response);
 
 echo $response;
 
+$obj = json_decode( $response ,true);
 
+var_dump($obj);
 
 //いったん書き出し
 
@@ -727,12 +729,14 @@ echo "=====jsonエラー確認完了===========";
     <script src="./dist/js/sb-admin-2.js"></script>
 
         <script>
+        /*
         $(window).load(function () {
             //$("#test").html("Hello World!")
             alert("テスト");
             var obj = $.parseJSON('<?php echo $response; ?>');
             alert(obj);
         });
+*/
     </script>
 
     
