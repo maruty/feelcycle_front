@@ -39,6 +39,22 @@ echo "<br />";
 echo $response;
 echo "<br />";
 
+//いったん書き出し
+
+
+  if(!$FP = fopen("./test.json","w"))
+    echo "error";
+
+  else{
+    fwrite($FP,$response);
+    fclose($FP);
+  }
+
+//json読込
+$jsonurl = "http://52.69.227.6/php/test.json"
+$json = file_get_contents($jsonurl);
+
+
 
 /*
 $output = '[{
@@ -73,7 +89,7 @@ echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
 //$obj = json_decode($output,true);
-$obj = json_decode($response,true);
+$obj = json_decode($json ,true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
