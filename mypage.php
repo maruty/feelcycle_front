@@ -35,9 +35,14 @@ $response = curl_exec($conn);
 echo $response;
 echo "<br />";
 $coutOffset = strpos($response, "lesson");
-
+//echo strlen($response); // 6
 echo "coutoffset:".$coutOffset;
 
+echo "================";
+
+$output = substr($response, $coutOffset-2, strlen($response));
+
+echo $output;
 
 //echo "ログインステータス".$_SESSION["loginStatus"];
 ?>
