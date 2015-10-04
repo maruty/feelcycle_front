@@ -34,7 +34,7 @@ $response = curl_exec($conn);
 
 echo $response;
 echo "<br />";
-$coutOffset = strpos($response, "{\"lesson\"");
+$coutOffset = strpos($response, "lesson");
 //echo strlen($response); // 6
 echo "coutoffset:".$coutOffset;
 
