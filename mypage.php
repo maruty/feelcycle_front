@@ -63,7 +63,8 @@ $hoge = mb_convert_encoding($response, "utf8", "auto");
 echo "=====エンコーディング確認======";
 echo "<br />";
 
-echo mb_convert_encoding();
+/* 現在のdetect_orderで文字エンコーディングを検出 */
+echo mb_detect_encoding($str);
 echo "<br />";
 
 $fuga = "";
