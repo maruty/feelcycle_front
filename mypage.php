@@ -84,7 +84,7 @@ $output = '[{
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
-$obj = json_decode($response ,true);
+$obj = json_decode({$response} ,true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
