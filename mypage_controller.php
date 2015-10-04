@@ -20,6 +20,7 @@
 
     $url = $FINAL_URL_STRING."loginId=".$_POST['loginId']."&"."loginPass=".$_POST['loginPass'];
 
+    echo $url;
     //curl初期化
     $conn = curl_init();
 
@@ -43,13 +44,13 @@
         //$_SESSION["loginStatus"] = "false";
 
         //TOPに戻ろうか
-        header("Location: ./index.php");
+        //header("Location: ./index.php");
     }else{
         // 文字列があった場合
         $_SESSION["loginStatus"] = "true";
         $_SESSION["loginId"] = $_POST['loginId'];
         $_SESSION["loginPass"] = $_POST["loginPass"];
-        header("Location: ./mypage.php");
+        //header("Location: ./mypage.php");
     }
 ?>
 
