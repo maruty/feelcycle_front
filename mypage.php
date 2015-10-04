@@ -84,6 +84,9 @@ $response = curl_exec($conn);
 
 $response = str_replace(array("\r\n", "\r", "\n"), '', $response );
 $response = preg_replace('/(\s|　)/','',$response);
+
+$response = mb_convert_encoding($response, "EUC-JP", "UTF-8")
+
 echo $response;
 
 //いったん書き出し
