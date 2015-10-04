@@ -49,18 +49,11 @@ echo $output;
  
 // オブジェクト毎にパース
 // trueを付けると連想配列として分解して格納してくれます。
-$obj = json_decode($output, true);
+//$obj = json_decode($output, true);
 
-// パースに失敗した時は処理終了
-if ($obj === NULL) {
-echo "パース失敗";
-}
-
+$obj = json_decode( $output , false ) ;
 
 var_dump($obj);
-
-
-
 
 //echo "ログインステータス".$_SESSION["loginStatus"];
 ?>
