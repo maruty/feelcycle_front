@@ -53,11 +53,11 @@ $json = file_get_contents("./test.json");
 
 echo "json=:" . $json;
 //echo mb_detect_encoding($json);
-echo mb_internal_encoding();
+//echo mb_internal_encoding();
 
-$temp = ''.$json.'';
+//$temp = ''.$json.'';
 
-//$hoge = mb_convert_encoding($temp, "utf8", "auto");
+$hoge = mb_convert_encoding($json, "utf8", "auto");
 /*
 $output = '[{
         "instructor": "Mio", 
@@ -91,7 +91,7 @@ $output = '[{
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
-$obj = json_decode( $json ,true);
+$obj = json_decode( $hoge ,true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
