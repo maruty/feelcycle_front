@@ -53,7 +53,7 @@ $json = file_get_contents("./test.json");
 
 var_dump($json );
 
-$json = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
+//$json = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
 
 
 $hoge = mb_convert_encoding($json, "utf8", "auto");
@@ -116,6 +116,11 @@ var_dump($ary);
     <meta name="author" content="">
 
     <title>Feel Analytics マイページ</title>
+    <script>
+    jQuery(document).ready(
+            var obj = $.parseJSON('<?php echo $hoge; ?>');
+    );
+    </script>
 
     <!-- Bootstrap Core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
