@@ -88,7 +88,7 @@ echo "<br />";
 
 $fuga = preg_replace('/(\s|　)/','',$moji);
 
-
+$fuga = str_replace(array("\r\n", "\r", "\n"), '', $fuga);
 //$fuga  = mb_convert_encoding($fuga , "EUC-JP", "UTF-8")
 
 var_dump($hoge);
