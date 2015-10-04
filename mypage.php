@@ -27,7 +27,7 @@ $conn = curl_init();
 curl_setopt($conn, CURLOPT_CONNECTTIMEOUT, 2);
 curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
 //curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
-//curl_setopt($conn, CURLOPT_HEADER, true);
+curl_setopt($conn, CURLOPT_HEADER, false);
 
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
