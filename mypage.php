@@ -51,6 +51,12 @@ $temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 // trueを付けると連想配列として分解して格納してくれます。
 $obj = json_decode($temp, true);
 
+// パースに失敗した時は処理終了
+if ($obj === NULL) {
+echo "パース失敗";
+}
+
+
 var_dump($obj);
 
 
