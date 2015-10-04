@@ -51,6 +51,7 @@ echo $response;
 $json = file_get_contents("./test.json");
 
 echo "json=:" . $json;
+echo mb_detect_encoding($json);
 
 $temp = ''.$json.'';
 /*
