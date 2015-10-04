@@ -42,7 +42,15 @@ $output = substr($response, ($coutOffset-20), strlen($response));
 echo "b";
 //$output0 = file_get_contents($output);
 echo "c";
-
+$output = '    {
+        "instructor": "Mio", 
+        "lessonDate": "2015/09/29(火)", 
+        "lessonMashine": "28", 
+        "lessonName": "BSL Hit 4", 
+        "lessonTenpo": "池袋（IKB）", 
+        "lessonTimeFrom": "12:30", 
+        "lessonTimeTo": "13:15"
+    }';
 //$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
 echo "=====文字列出力===========";
@@ -61,7 +69,7 @@ echo "=====文字列完了===========";
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
-$obj = json_decode( $output) ;
+$obj = json_decode($output,true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
@@ -70,7 +78,7 @@ echo "<br />";
 echo json_last_error();
 echo "<br />";
 echo "=====jsonエラー確認完了===========";
-
+echo "<br />";
 var_dump($obj);
 
 
