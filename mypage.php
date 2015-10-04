@@ -50,6 +50,15 @@ $output = '    {
         "lessonTenpo": "池袋（IKB）", 
         "lessonTimeFrom": "12:30", 
         "lessonTimeTo": "13:15"
+    },
+    {
+        "instructor": "Mio", 
+        "lessonDate": "2015/09/29(火)", 
+        "lessonMashine": "28", 
+        "lessonName": "BSL Hit 4", 
+        "lessonTenpo": "池袋（IKB）", 
+        "lessonTimeFrom": "12:30", 
+        "lessonTimeTo": "13:15"
     }';
 //$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
