@@ -40,7 +40,7 @@ $coutOffset = strpos($response, "lesson");
 echo "a";
 $output = substr($response, ($coutOffset-20), strlen($response));
 echo "b";
-$output0 = file_get_contents($output);
+//$output0 = file_get_contents($output);
 echo "c";
 
 //$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
@@ -49,7 +49,7 @@ echo "================";
 echo "<br />";
 
 
-echo $output0;
+echo $output;
 
 // 文字化けするかもしれないのでUTF-8に変換
 //$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
@@ -58,7 +58,7 @@ echo $output0;
 // trueを付けると連想配列として分解して格納してくれます。
 //$obj = json_decode($output, true);
 
-$obj = json_decode( $output0) ;
+$obj = json_decode( $output) ;
 
 var_dump($obj);
 
