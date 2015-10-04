@@ -26,8 +26,8 @@ $conn = curl_init();
 
 curl_setopt($conn, CURLOPT_CONNECTTIMEOUT, 2);
 curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
-curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($conn, CURLOPT_HEADER, true);
+//curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
+//curl_setopt($conn, CURLOPT_HEADER, true);
 
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
@@ -43,7 +43,7 @@ echo "b";
 //$output0 = file_get_contents($output);
 echo "c";
 
-$str = mb_convert_encoding($output, "UTF-8", "auto");
+//$str = mb_convert_encoding($output, "UTF-8", "auto");
 
 
 /*
