@@ -45,22 +45,31 @@ echo "c";
 
 //$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
-echo "================";
+echo "=====文字列出力===========";
 echo "<br />";
 
 
 echo $output;
-
+echo "<br />";
+echo "=====文字列完了===========";
 // 文字化けするかもしれないのでUTF-8に変換
 //$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
  
 // オブジェクト毎にパース
 // trueを付けると連想配列として分解して格納してくれます。
 //$obj = json_decode($output, true);
-
+echo "<br />";
+echo "=====json出力===========";
+echo "<br />";
 $obj = json_decode( $output) ;
-
+echo "<br />";
+echo "=====json出力完了===========";
+echo "<br />";
+echo "=====jsonエラー確認===========";
+echo "<br />";
 echo json_last_error();
+echo "<br />";
+echo "=====jsonエラー確認完了===========";
 
 var_dump($obj);
 
