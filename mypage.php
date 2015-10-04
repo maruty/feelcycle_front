@@ -58,7 +58,12 @@ var_dump($response);
 
 $hoge = mb_convert_encoding($response, "utf8", "auto");
 
-$fuga = "'" . $hoge  . "'";
+//$fuga = "'" . $hoge  . "'";
+
+
+$fuga = "";
+
+$fuga = $hoge;
 
 //文字列半角　全角空白削除
 
