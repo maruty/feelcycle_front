@@ -74,10 +74,16 @@ $fuga = "'".$response."'";
 echo "<br />";
 echo "fuga:".$fuga;
 
-$fuga = "";
+//$fuga = "";
 
-$fuga = $hoge;
+//$fuga = $hoge;
 
+
+$moji = mb_substr($fuga, 0, strlen($fuga), "UTF-8");
+
+echo "<br />";
+echo "文字：".$moji;
+echo "<br />";
 //文字列半角　全角空白削除
 
 //$fuga = preg_replace('/(\s|　)/','',$hoge);
