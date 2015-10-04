@@ -91,11 +91,11 @@ mb_language('Japanese');
 $response = str_replace('&#034;', '"', $response);
 
 
-echo $response;
+//echo $response;
 
-$obj = json_decode( $response ,true);
+$lessonObject = json_decode( $response ,true);
 
-var_dump($obj);
+//var_dump($obj);
 
 //いったん書き出し
 
@@ -616,6 +616,18 @@ echo "=====jsonエラー確認完了===========";
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                              <?php
+                                                    foreach ($lessonObject as $id => $rec) {
+                                                      //echo $id . PHP_EOL;
+                                                      echo "<td>" . $rec['lessonName'] . "</td>";
+                                                      echo "<td>" . $rec['lessonDate'] . "</td>";
+                                                      echo "<td>" . $rec['instructor'] . "</td>";
+                                                      echo "<td>" . $rec['lessonTenpo'] . "</td>";
+                                                    }
+                                                    ?>      
+
+                                                </tr>
                                                 <tr>
                                                     <td>BB2 Hit 8</td>
                                                     <td>2015/04/21</td>
