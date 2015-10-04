@@ -32,12 +32,7 @@ curl_setopt($conn, CURLOPT_HEADER, false);
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
 
-
-echo "=====response文字列出力===========";
-echo "<br />";
-
 echo $response;
-echo "<br />";
 
 //いったん書き出し
 
@@ -85,12 +80,11 @@ $output = '[{
 // オブジェクト毎にパース
 // trueを付けると連想配列として分解して格納してくれます。
 //$obj = json_decode($output, true);
-/*
+
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
-$obj = json_decode($output,true);
-$obj = json_decode($json ,true);
+$obj = json_decode($response ,true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
@@ -102,7 +96,6 @@ echo "=====jsonエラー確認完了===========";
 echo "<br />";
 var_dump($obj);
 
-*/
 
 
 //echo "ログインステータス".$_SESSION["loginStatus"];
