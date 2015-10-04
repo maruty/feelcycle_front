@@ -39,17 +39,6 @@ echo "<br />";
 echo $response;
 echo "<br />";
 
-$coutOffset = strpos($response, "lesson");
-//echo strlen($response); // 6
-//echo "coutoffset:".$coutOffset;
-echo "a";
-$output = substr($response, ($coutOffset-20), strlen($response));
-echo "b";
-//$output0 = file_get_contents($output);
-echo "c";
-
-//$str = mb_convert_encoding($output, "UTF-8", "auto");
-
 
 /*
 $output = '[{
@@ -73,14 +62,7 @@ $output = '[{
     */
 //$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
-echo "=====文字列出力===========";
-echo "<br />";
 
-
-//echo $output;
-echo $str;
-echo "<br />";
-echo "=====文字列完了===========";
 // 文字化けするかもしれないのでUTF-8に変換
 //$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
  
@@ -91,7 +73,7 @@ echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
 //$obj = json_decode($output,true);
-$obj = json_decode($str,true);
+$obj = json_decode($response,true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
