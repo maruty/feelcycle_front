@@ -125,6 +125,7 @@ var_dump($ary);
     <script>
     jQuery(document).ready(
             var obj = $.parseJSON('<?php echo $hoge; ?>');
+            alert(obj);
     );
     </script>
 
