@@ -38,11 +38,14 @@ $coutOffset = strpos($response, "lesson");
 //echo strlen($response); // 6
 //echo "coutoffset:".$coutOffset;
 
+$output = substr($response, ($coutOffset-20), strlen($response));
+$output2 =  mb_convert_encoding($output , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+
 echo "================";
 echo "<br />";
-$output = substr($response, ($coutOffset-20), strlen($response));
 
-echo $output;
+
+echo $output2;
 
 // 文字化けするかもしれないのでUTF-8に変換
 //$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
@@ -51,9 +54,12 @@ echo $output;
 // trueを付けると連想配列として分解して格納してくれます。
 //$obj = json_decode($output, true);
 
-$obj = json_decode( $output) ;
+$obj = json_decode( $output2) ;
 
 var_dump($obj);
+
+
+
 
 //echo "ログインステータス".$_SESSION["loginStatus"];
 ?>
