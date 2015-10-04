@@ -60,6 +60,11 @@ $hoge = mb_convert_encoding($response, "utf8", "auto");
 
 //$fuga = "'" . $hoge  . "'";
 
+echo "=====エンコーディング確認======";
+echo "<br />";
+
+echo mb_convert_encoding();
+echo "<br />";
 
 $fuga = "";
 
