@@ -67,6 +67,13 @@ echo "<br />";
 echo mb_detect_encoding($response);
 echo "<br />";
 
+echo "<br />";
+echo "=====文字列にエスケープシーケンスがある気がするのでそこら辺の確認======";
+$fuga = "'".$response."'";
+
+echo "<br />";
+echo "fuga:".$fuga;
+
 $fuga = "";
 
 $fuga = $hoge;
