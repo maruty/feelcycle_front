@@ -58,6 +58,10 @@ var_dump($json );
 
 $hoge = mb_convert_encoding($json, "utf8", "auto");
 
+//文字列半角　全角空白削除
+
+$fuga = preg_replace('/(\s|　)/','',$hoge);
+
 var_dump($hoge);
 /*
 $output = '[{
@@ -85,8 +89,8 @@ echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
 //$obj = json_decode( $hoge ,true);
-$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $hoge),true); 
-$ary = json_decode(str_replace('&quot;','"',$hoge),true);
+$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $fuga ),true); 
+$ary = json_decode(str_replace('&quot;','"',$fuga ),true);
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
