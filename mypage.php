@@ -51,8 +51,8 @@ echo "<br />";
   }
 */
 //json読込
-$jsonurl = "http://localhost/php/test.json"
-$json = file_get_contents($jsonurl);
+//$jsonurl = "http://localhost/php/test.json"
+//$json = file_get_contents($jsonurl);
 
 
 
@@ -85,10 +85,11 @@ $output = '[{
 // オブジェクト毎にパース
 // trueを付けると連想配列として分解して格納してくれます。
 //$obj = json_decode($output, true);
+/*
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
-//$obj = json_decode($output,true);
+$obj = json_decode($output,true);
 $obj = json_decode($json ,true);
 echo "<br />";
 echo "=====json出力完了===========";
@@ -101,7 +102,7 @@ echo "=====jsonエラー確認完了===========";
 echo "<br />";
 var_dump($obj);
 
-
+*/
 
 
 //echo "ログインステータス".$_SESSION["loginStatus"];
