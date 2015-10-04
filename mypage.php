@@ -40,7 +40,7 @@ echo "coutoffset:".$coutOffset;
 
 echo "================";
 echo "<br />";
-$output = substr($response, ($coutOffset-2), strlen($response));
+$output = substr($response, ($coutOffset-20), strlen($response));
 
 echo $output;
 
