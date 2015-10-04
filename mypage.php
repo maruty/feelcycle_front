@@ -1,6 +1,8 @@
 <?php 
 session_start();
 //クッキー処理
+
+/*
 if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != "" 
     && isset($_COOKIE["loginId"]) && $_COOKIE["loginId"] != ""
     && isset($_COOKIE["loginPass"]) && $_COOKIE["loginPass"] != ""){
@@ -9,12 +11,15 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
     $_SESSION["loginId"] = $_COOKIE["loginId"];
     $_SESSION["loginPass"] = $_COOKIE["loginPass"];
 }
+*/
 
 $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/getLesson?";
     //URL組み立て用
     $url = "";
 
     $url = $FINAL_URL_STRING."loginId=".$_POST['loginId']."&"."loginPass=".$_POST['loginPass'];
+
+    echo "URL:".$url;
 
     //curl初期化
     $conn = curl_init();
