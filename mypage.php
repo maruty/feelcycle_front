@@ -36,13 +36,13 @@ echo $response;
 echo "<br />";
 $coutOffset = strpos($response, "lesson");
 //echo strlen($response); // 6
-//echo "coutoffset:".$coutOffset;
+echo "coutoffset:".$coutOffset;
 
-//echo "================";
-//echo "<br />";
+echo "================";
+echo "<br />";
 $output = substr($response, ($coutOffset-20), strlen($response));
 
-//echo $output;
+echo $output;
 
 // 文字化けするかもしれないのでUTF-8に変換
 //$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
