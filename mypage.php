@@ -88,8 +88,12 @@ $response = str_replace(array("\r\n", "\r", "\n"), '', $response );
 $response = preg_replace('/(\s|　)/','',$response);
 mb_language('Japanese');
 //$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
+$response = str_replace('&#034;', '"', $response);
+
 
 echo $response;
+
+
 
 //いったん書き出し
 
