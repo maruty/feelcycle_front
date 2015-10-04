@@ -1,6 +1,8 @@
 <?php session_start();
 
 //クッキー処理
+
+/*
 if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != "" 
     && isset($_COOKIE["loginId"]) && $_COOKIE["loginId"] != ""
     && isset($_COOKIE["loginPass"]) && $_COOKIE["loginPass"] != ""){
@@ -18,6 +20,7 @@ if( isset( $_SESSION["loginStatus"]) &&  $_SESSION["loginStatus"] != null
     //session_destroy();//セッション破棄
     //header("Location:./index.php");
 }
+*/
  
 
 ?>

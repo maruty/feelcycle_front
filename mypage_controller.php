@@ -3,6 +3,7 @@
     session_start();
     //var_dump($_POST);
     //クッキーチェックが付いてた場合はここで保存してあげる
+    /*
     if( $_POST['remember'] === "Remember Me"){
         //echo "ここきた";
         
@@ -11,6 +12,7 @@
         setcookie("loginPass", $_POST["loginStatus"], time()+3600*24*14);
         //echo "クッキー:" . $_COOKIE["loginStatus"];
     }
+    */
 
     $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/checkUser?";
     //URL組み立て用
