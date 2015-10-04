@@ -43,13 +43,13 @@ echo "b";
 $output0 = file_get_contents($output);
 echo "c";
 
-$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+//$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
 echo "================";
 echo "<br />";
 
 
-echo $output2;
+echo $output0;
 
 // 文字化けするかもしれないのでUTF-8に変換
 //$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
@@ -58,7 +58,7 @@ echo $output2;
 // trueを付けると連想配列として分解して格納してくれます。
 //$obj = json_decode($output, true);
 
-$obj = json_decode( $output2) ;
+$obj = json_decode( $output0) ;
 
 var_dump($obj);
 
