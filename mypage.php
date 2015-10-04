@@ -123,10 +123,12 @@ var_dump($ary);
 
     <title>Feel Analytics マイページ</title>
     <script>
-    jQuery(document).ready(
+        $(function(){
+            //$("#test").html("Hello World!")
+            alert("テスト");
             var obj = $.parseJSON('<?php echo $hoge; ?>');
             alert(obj);
-    );
+        });
     </script>
 
     <!-- Bootstrap Core CSS -->
