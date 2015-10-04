@@ -110,7 +110,7 @@ $output = '[{
     }]';
     */
 
-
+$moji = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
