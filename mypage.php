@@ -51,12 +51,6 @@ echo $response;
 //$jsonurl = "http://localhost/php/test.json"
 $json = file_get_contents("./test.json");
 
-echo "json=:" . $json;
-//echo mb_detect_encoding($json);
-//echo mb_internal_encoding();
-
-//$temp = ''.$json.'';
-
 $hoge = mb_convert_encoding($json, "utf8", "auto");
 /*
 $output = '[{
@@ -78,20 +72,13 @@ $output = '[{
         "lessonTimeTo": "13:15"
     }]';
     */
-//$output2 =  mb_convert_encoding($output0 , 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
-
-// 文字化けするかもしれないのでUTF-8に変換
-//$temp = mb_convert_encoding($output, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
- 
-// オブジェクト毎にパース
-// trueを付けると連想配列として分解して格納してくれます。
-//$obj = json_decode($output, true);
 
 echo "<br />";
 echo "=====json出力===========";
 echo "<br />";
-$obj = json_decode( $hoge ,true);
+//$obj = json_decode( $hoge ,true);
+$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $hoge),true);  
 echo "<br />";
 echo "=====json出力完了===========";
 echo "<br />";
