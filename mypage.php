@@ -59,7 +59,7 @@ var_dump($response);
 $hoge = mb_convert_encoding($response, "utf8", "auto");
 
 //$fuga = "'" . $hoge  . "'";
-
+echo "<br />";
 echo "=====エンコーディング確認======";
 echo "<br />";
 
