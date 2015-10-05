@@ -124,10 +124,10 @@ mb_language('Japanese');
 //$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
 $responseUserData = str_replace('&#034;', '"', $response);
 
-$userObject = json_decode( $responseUserData ,true);
+//$userObject = json_decode( $responseUserData ,true);
 
 
-var_dump($userObject);
+//var_dump($userObject);
 
 //いったん書き出し
 
