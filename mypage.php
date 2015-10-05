@@ -64,11 +64,15 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 }
 */
 
-$FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/getLesson?";
+//レッスン情報取得関係
+
+$FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/";
+$FINAL_GET_LESSION = "getLesson?";
+$FINAL_GET_USERDATA = "getUserData?"; 
 //URL組み立て用
 $url = "";
 
-$url = $FINAL_URL_STRING."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
+$url = $FINAL_URL_STRING.$FINAL_GET_LESSION."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
 
 //echo "URL:".$url;
 
@@ -95,7 +99,35 @@ $response = str_replace('&#034;', '"', $response);
 
 $lessonObject = json_decode( $response ,true);
 
-//var_dump($obj);
+
+
+//ニックネーム取得
+//とりあえずイケてないベタ書き処理で実施
+$url = "";
+$url = $FINAL_URL_STRING.$FINAL_GET_USERDATA."loginId=".$_SESSION['loginId'];
+
+//curl初期化
+$conn = curl_init();
+
+curl_setopt($conn, CURLOPT_CONNECTTIMEOUT, 2);
+curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($conn, CURLOPT_HEADER, false);
+
+curl_setopt($conn, CURLOPT_URL, $url);
+$response = curl_exec($conn);
+
+
+$response = str_replace(array("\r\n", "\r", "\n"), '', $response );
+$response = preg_replace('/(\s|　)/','',$response);
+mb_language('Japanese');
+//$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
+$responseUserData = str_replace('&#034;', '"', $response);
+
+$userObject = json_decode( $responseUserData ,true);
+
+
+var_dump($userObject);
 
 //いったん書き出し
 
