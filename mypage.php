@@ -104,7 +104,7 @@ $lessonObject = json_decode( $response ,true);
 //ニックネーム取得
 //とりあえずイケてないベタ書き処理で実施
 $url = "";
-$url = $FINAL_URL_STRING.$FINAL_GET_USERDATA."loginId=".$_SESSION['loginId']."loginPass=".$_SESSION['loginPass'];
+$url = $FINAL_URL_STRING.$FINAL_GET_USERDATA."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
 
 //curl初期化
 $conn = curl_init();
