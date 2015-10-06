@@ -103,11 +103,11 @@ var_dump($lessonObject);
 
 
 //lessonをレッスン名でソート
-/*
-foreach ($data as $key => $value){
-  $key_id[$key] = $value['id'];
+
+foreach ($lessonObject  as $key => $value){
+  $key_id[$key] = $value['lessonDate'];
 }
-:?
+array_multisort ( $key_id , SORT_ASC , $lessonObject );
 
 //ニックネーム取得
 //とりあえずイケてないベタ書き処理で実施
