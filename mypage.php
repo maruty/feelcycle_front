@@ -99,7 +99,15 @@ $response = str_replace('&#034;', '"', $response);
 
 $lessonObject = json_decode( $response ,true);
 
+var_dump($lessonObject);
 
+
+//lessonをレッスン名でソート
+/*
+foreach ($data as $key => $value){
+  $key_id[$key] = $value['id'];
+}
+:?
 
 //ニックネーム取得
 //とりあえずイケてないベタ書き処理で実施
