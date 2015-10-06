@@ -127,7 +127,7 @@ $responseUserData = str_replace('&#034;', '"', $response);
 $userObject = json_decode( $responseUserData ,true);
 
 
-var_dump($userObject);
+//var_dump($userObject);
 
 //いったん書き出し
 
@@ -518,7 +518,7 @@ echo "=====jsonエラー確認完了===========";
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">●●さんのFeel Analytics</h1>
+                    <h1 class="page-header"><?php echo $userObject["userNickName"]; ?>さんのFeel Analytics</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
