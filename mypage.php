@@ -99,7 +99,7 @@ $response = str_replace('&#034;', '"', $response);
 
 $lessonObject = json_decode( $response ,true);
 
-var_dump($lessonObject);
+//var_dump($lessonObject);
 
 
 //lessonをレッスン名でソート
@@ -107,7 +107,7 @@ var_dump($lessonObject);
 foreach ($lessonObject  as $key => $value){
   $key_id[$key] = $value['lessonDate'];
 }
-array_multisort ( $key_id , SORT_ASC , $lessonObject );
+array_multisort ( $key_id , SORT_DESC , $lessonObject );
 
 //ニックネーム取得
 //とりあえずイケてないベタ書き処理で実施
