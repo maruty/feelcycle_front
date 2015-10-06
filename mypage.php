@@ -67,8 +67,8 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 //レッスン情報取得関係
 
 $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/";
-$FINAL_GET_LESSION = "getLesson?";
-$FINAL_GET_USERDATA = "getUserData?"; 
+$FINAL_GET_LESSION = "Lesson?";
+$FINAL_GET_USERDATA = "UserData?"; 
 //URL組み立て用
 $url = "";
 
@@ -124,10 +124,10 @@ mb_language('Japanese');
 //$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
 $responseUserData = str_replace('&#034;', '"', $response);
 
-//$userObject = json_decode( $responseUserData ,true);
+$userObject = json_decode( $responseUserData ,true);
 
 
-//var_dump($userObject);
+var_dump($userObject);
 
 //いったん書き出し
 
