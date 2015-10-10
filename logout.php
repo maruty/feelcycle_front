@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+echo "ここ";
 //if(isset($_SESSION['loginStatus'])&& isset($_SESSION['loginId']) && isset($_SESSION['loginPass']))
 
 // セッション変数を解除
