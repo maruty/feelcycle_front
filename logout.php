@@ -9,12 +9,12 @@ $_SESSION = array();
 
 // セッションcookieを削除
 
-if (isset($_COOKIE['loginStatus']) or isset($_COOKIE['loginId'] or isset($_COOKIE['loginPass'] )) {
+//if (isset($_COOKIE['loginStatus']) or isset($_COOKIE['loginId'] or isset($_COOKIE['loginPass'] )) {
 
     //setcookie("loginStatus", '', time()-420000);
     //setcookie("loginId", '', time()-420000);
     //setcookie("loginPass", '', time()-420000);
-}
+//}
 
 // セッションを破棄
 
