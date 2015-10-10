@@ -64,13 +64,12 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 }
 */
 
-//レッスン情報取得関係
+/////レッスン情報取得関係
 
 $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/";
 $FINAL_GET_LESSION = "Lesson?";
 $FINAL_GET_USERDATA = "UserData?"; 
-//URL組み立て用
-$url = "";
+$FINAL_GET_MONTHLY = "lessonMonthlyData";
 
 $url = $FINAL_URL_STRING.$FINAL_GET_LESSION."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
 
@@ -109,7 +108,7 @@ foreach ($lessonObject  as $key => $value){
 }
 array_multisort ( $key_id , SORT_DESC , $lessonObject );
 
-//ニックネーム取得
+////////ニックネーム取得
 //とりあえずイケてないベタ書き処理で実施
 $url = "";
 $url = $FINAL_URL_STRING.$FINAL_GET_USERDATA."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
@@ -135,118 +134,34 @@ $responseUserData = str_replace('&#034;', '"', $response);
 $userObject = json_decode( $responseUserData ,true);
 
 
-//var_dump($userObject);
+////////マンスリーレッスンデータ
+$url = "";
+$url = $FINAL_URL_STRING.$FINAL_GET_MONTHLY."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
 
-//いったん書き出し
+//curl初期化
+$conn = curl_init();
 
-/*
-  if(!$FP = fopen("./test.json","w"))
-    echo "error";
+curl_setopt($conn, CURLOPT_CONNECTTIMEOUT, 2);
+curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($conn, CURLOPT_HEADER, false);
 
-  else{
-    fwrite($FP,$response);
-    fclose($FP);
-  }
-*/
-//json読込
-//$jsonurl = "http://localhost/php/test.json"
-//$json = file_get_contents("./test.json");
-
-//var_dump($response);
-
-//$json = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
+curl_setopt($conn, CURLOPT_URL, $url);
+$response = curl_exec($conn);
 
 
-//$hoge = mb_convert_encoding($response, "utf8", "auto");
-
-//$fuga = "'" . $hoge  . "'";
-/*
-echo "<br />";
-echo "=====エンコーディング確認======";
-echo "<br />";
-*/
-/* 現在のdetect_orderで文字エンコーディングを検出 */
-/*
-echo mb_detect_encoding($response);
-echo "<br />";
-
-echo "<br />";
-echo "=====文字列にエスケープシーケンスがある気がするのでそこら辺の確認======";
-*/
-
-/*
-$fuga = "'".$response."'";
-
-echo "<br />";
-echo "fuga:".$fuga;
-
-*/
-//$fuga = "";
-
-//$fuga = $hoge;
-
-
-//$moji = mb_substr($fuga, 0, strlen($fuga), "UTF-8");
-/*
-echo "<br />";
-echo "文字：".$moji;
-echo "<br />";
-*/
-//文字列半角　全角空白削除
-
-//$fuga = preg_replace('/(\s|　)/','',$moji);
-
-//$fuga = str_replace(array("\r\n", "\r", "\n"), '', $fuga);
-//$fuga  = mb_convert_encoding($fuga , "EUC-JP", "UTF-8")
-
-//var_dump($hoge);
-/*
-$output = '[{
-        "instructor": "Mio", 
-        "lessonDate": "2015/09/29(火)", 
-        "lessonMashine": "28", 
-        "lessonName": "BSL Hit 4", 
-        "lessonTenpo": "池袋（IKB）", 
-        "lessonTimeFrom": "12:30", 
-        "lessonTimeTo": "13:15"
-    },
-    {
-        "instructor": "Mio", 
-        "lessonDate": "2015/09/29(火)", 
-        "lessonMashine": "28", 
-        "lessonName": "BSL Hit 4", 
-        "lessonTenpo": "池袋（IKB）", 
-        "lessonTimeFrom": "12:30", 
-        "lessonTimeTo": "13:15"
-    }]';
-    */
-
-//$moji = '[{"lessonDate":"2015/09/29(火)","lessonTimeFrom":"10:30","lessonTimeTo":"11:15","lessonName":"BSB Hous 1","instructor":"N.Yuki","lessonTenpo":"池袋（IKB）","lessonMashine":"17"}]';
-/*
-echo "<br />";
-echo "=====json出力===========";
-echo "<br />";
-$obj = json_decode( $response ,true);
-*/
-//$obj = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $response ),true); 
-//$ary = json_decode(str_replace('&quot;','"',$response ),true);
-/*
-echo "<br />";
-echo "=====json出力完了===========";
-echo "<br />";
-echo "=====jsonエラー確認===========";
-echo "<br />";
-echo json_last_error();
-echo "<br />";
-echo "=====jsonエラー確認完了===========";
-
-*///echo "<br />";
-//var_dump($obj);
-//var_dump($ary);
+$response = str_replace(array("\r\n", "\r", "\n"), '', $response );
+$response = preg_replace('/(\s|　)/','',$response);
+mb_language('Japanese');
+//$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
+$responseMonthlyData = str_replace('&#034;', '"', $response);
+//monthlyCountが配列
+$monthlyObject = json_decode( $responseMonthlyData ,true);
 
 
 
-//echo "ログインステータス".$_SESSION["loginStatus"];
+
+
 ?>
 
 
@@ -596,7 +511,7 @@ echo "=====jsonエラー確認完了===========";
                                     <i class="fa fa-tasks fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">開発中</div>
+                                    <div class="huge"><?php echo count($monthlyObject); ?></div>
                                     <div>Monthly Lesson</div>
                                 </div>
                             </div>
