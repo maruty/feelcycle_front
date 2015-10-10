@@ -477,7 +477,7 @@ echo "=====jsonエラー確認完了===========";
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i>設定</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>ログアウト</a>
+                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i>ログアウト</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
