@@ -2,7 +2,7 @@
 
 //クッキー処理
 
-/*
+
 if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != "" 
     && isset($_COOKIE["loginId"]) && $_COOKIE["loginId"] != ""
     && isset($_COOKIE["loginPass"]) && $_COOKIE["loginPass"] != ""){
@@ -17,10 +17,10 @@ if( isset( $_SESSION["loginStatus"]) &&  $_SESSION["loginStatus"] != null
  && isset( $_SESSION["loginPass"]) &&  $_SESSION["loginPass"] != null ){
     header("Location: ./mypage.php");
 }else{
-    //session_destroy();//セッション破棄
-    //header("Location:./index.php");
+    session_destroy();//セッション破棄
+    header("Location:./index.php");
 }
-*/
+
  
 
 ?>
