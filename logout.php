@@ -11,7 +11,7 @@ $_SESSION = array();
 
 if (isset($_COOKIE['loginStatus']) || isset($_COOKIE['loginId'] || isset($_COOKIE['loginPass'] )) {
 
-    setcookie("loginStatus", '', time()-420000);
+    //setcookie("loginStatus", '', time()-420000);
     //setcookie("loginId", '', time()-420000);
     //setcookie("loginPass", '', time()-420000);
 }
