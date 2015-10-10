@@ -8,15 +8,14 @@ echo "ここ";
 $_SESSION = array();
 
 // セッションcookieを削除
-/*
+
 if (isset($_COOKIE['loginStatus']) || isset($_COOKIE['loginId'] || isset($_COOKIE['loginPass'] )) {
 
     setcookie("loginStatus", '', time()-420000);
-    setcookie("loginId", '', time()-420000);
-    setcookie("loginPass", '', time()-420000);
+    //setcookie("loginId", '', time()-420000);
+    //setcookie("loginPass", '', time()-420000);
 }
 
-*/
 // セッションを破棄
 
 session_destroy();
