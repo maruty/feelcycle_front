@@ -136,9 +136,9 @@ $userObject = json_decode( $responseUserData ,true);
 
 ////////マンスリーレッスンデータ
 $url = "";
-$url = $FINAL_URL_STRING.$FINAL_GET_MONTHLY."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
+$url = $FINAL_URL_STRING.$FINAL_GET_MONTHLY."loginId=".$_SESSION['loginId'];
 
-echo $url;
+//echo $url;
 //curl初期化
 $conn = curl_init();
 
@@ -159,7 +159,7 @@ $responseMonthlyData = str_replace('&#034;', '"', $response);
 //monthlyCountが配列
 $monthlyObject = json_decode( $responseMonthlyData ,true);
 
-var_dump($monthlyObject);
+//var_dump($monthlyObject);
 
 
 
