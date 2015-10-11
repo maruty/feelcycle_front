@@ -183,7 +183,7 @@ curl_setopt($conn, CURLOPT_HEADER, false);
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
 
-echo $response;
+//echo $response;
 
 $response = str_replace(array("\r\n", "\r", "\n"), '', $response );
 $response = preg_replace('/(\s|　)/','',$response);
@@ -194,7 +194,7 @@ $responseShukeiData = str_replace('&#034;', '"', $response);
 $shukeiObject = json_decode( $responseShukeiData ,true);
 
 
-var_dump($shukeiObject);
+//var_dump($shukeiObject);
 
 ?>
 
@@ -652,7 +652,19 @@ var_dump($shukeiObject);
                                         <div class="timeline-body">
 
 
-                                            <p>BB2 Hit 8</p>
+                                            <p>
+                                                
+                                              <?php
+                                                    foreach ($shukeiObject as $id => $rec) {
+                                                        if($rec['shukeiName'] === "MaxLessoname"){
+                                                            echo $rec['shukeiValue'];
+                                                        }
+                                                    }
+                                                ?> 
+
+
+                                                
+                                            </p>
                                         </div>
                                     </div>
                                 </li>
@@ -668,7 +680,17 @@ var_dump($shukeiObject);
                                             </p>
                                         </div>
                                         <div class="timeline-body">
-                                            <p>BB2 Hit 8</p>
+
+
+                                            <p>
+                                              <?php
+                                                    foreach ($shukeiObject as $id => $rec) {
+                                                        if($rec['shukeiName'] === "MaxInstroctor"){
+                                                            echo $rec['shukeiValue'];
+                                                        }
+                                                    }
+                                                ?> 
+                                            </p>
                                         </div>
                                     </div>
 
