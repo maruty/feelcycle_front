@@ -69,7 +69,7 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/";
 $FINAL_GET_LESSION = "Lesson?";
 $FINAL_GET_USERDATA = "UserData?"; 
-$FINAL_GET_MONTHLY = "lessonMonthlyData?";
+$FINAL_GET_MONTHLY = "LessonMonthlyData?";
 
 $url = $FINAL_URL_STRING.$FINAL_GET_LESSION."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
 
