@@ -138,6 +138,7 @@ $userObject = json_decode( $responseUserData ,true);
 $url = "";
 $url = $FINAL_URL_STRING.$FINAL_GET_MONTHLY."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
 
+echo $url;
 //curl初期化
 $conn = curl_init();
 
@@ -157,6 +158,8 @@ mb_language('Japanese');
 $responseMonthlyData = str_replace('&#034;', '"', $response);
 //monthlyCountが配列
 $monthlyObject = json_decode( $responseMonthlyData ,true);
+
+var_dump($monthlyObject);
 
 
 
