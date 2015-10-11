@@ -569,7 +569,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                     <!-- /.panel -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> 受講履歴
+                            <i class="fa fa-bar-chart-o fa-fw"></i> 過去40レッスンの受講履歴
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -607,15 +607,18 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                             <tbody>
                                                 
                                               <?php
+                                                    $count = 0;
                                                     foreach ($lessonObject as $id => $rec) {
                                                       //echo $id . PHP_EOL;
-                                                    echo "<tr>";
+                                                    if($count =< 40)
+                                                      echo "<tr>";
                                                       echo "<td>" . $rec['lessonName'] . "</td>";
                                                       echo "<td>" . $rec['lessonDate'] . "</td>";
                                                       echo "<td>" . $rec['instructor'] . "</td>";
                                                       echo "<td>" . $rec['lessonTenpo'] . "</td>";
+                                                      echo " </tr>";
                                                     }
-                                                    echo " </tr>";
+                                                    $count++;
                                                     ?> 
                                             </tbody>
                                         </table>
@@ -663,7 +666,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                 ?> 
 
 
-                                                
+
                                             </p>
                                         </div>
                                     </div>
