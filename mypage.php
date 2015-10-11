@@ -616,7 +616,7 @@ $monthlyObject = json_decode( $responseMonthlyData ,true);
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">一番受講しているレッスン</h4>
-                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> 更新日:2015/04/12 12:00現在</small>
+                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> 更新日:<?php echo date('Y年m月d日'); ?>現在</small>
                                             </p>
                                         </div>
                                         <div class="timeline-body">
@@ -631,8 +631,8 @@ $monthlyObject = json_decode( $responseMonthlyData ,true);
                                     <div class="timeline-panel">
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">一番受講していないレッスン</h4>
-                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> 更新日:2015/04/12 12:00現在</small>
+                                            <h4 class="timeline-title">一番受講しているインストラクター</h4>
+                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> 更新日:<?php echo date('Y年m月d日'); ?>現在</small>
                                             </p>
                                         </div>
                                         <div class="timeline-body">
@@ -645,8 +645,8 @@ $monthlyObject = json_decode( $responseMonthlyData ,true);
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">1ヶ月で1番受講回数が多かった月</h4>
-                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> 更新日:2015/04/12 12:00現在の集計値</small>
+                                            <h4 class="timeline-title">項目募集中！</h4>
+                                            <p><small class="text-muted"><i class="fa fa-clock-o"></i> 更新日:<?php echo date('Y年m月d日'); ?> 現在</small>
                                             </p>
                                         </div>
                                         <div class="timeline-body">
