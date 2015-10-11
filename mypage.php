@@ -138,7 +138,7 @@ $userObject = json_decode( $responseUserData ,true);
 $url = "";
 $url = $FINAL_URL_STRING.$FINAL_GET_MONTHLY."loginId=".$_SESSION['loginId'];
 
-//echo $url;
+echo $url;
 //curl初期化
 $conn = curl_init();
 
@@ -150,6 +150,7 @@ curl_setopt($conn, CURLOPT_HEADER, false);
 curl_setopt($conn, CURLOPT_URL, $url);
 $response = curl_exec($conn);
 
+echo $response;
 
 $response = str_replace(array("\r\n", "\r", "\n"), '', $response );
 $response = preg_replace('/(\s|　)/','',$response);
@@ -159,7 +160,7 @@ $responseMonthlyData = str_replace('&#034;', '"', $response);
 //monthlyCountが配列
 $monthlyObject = json_decode( $responseMonthlyData ,true);
 
-//var_dump($monthlyObject);
+var_dump($monthlyObject);
 
 
 
