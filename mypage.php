@@ -70,6 +70,8 @@ $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/";
 $FINAL_GET_LESSION = "Lesson?";
 $FINAL_GET_USERDATA = "UserData?"; 
 $FINAL_GET_MONTHLY = "LessonMonthlyData?";
+$FINAL_GET_SHUKEI = "shukeiData?";
+
 
 $url = $FINAL_URL_STRING.$FINAL_GET_LESSION."loginId=".$_SESSION['loginId']."&"."loginPass=".$_SESSION['loginPass'];
 
@@ -162,9 +164,37 @@ $monthlyObject = json_decode( $responseMonthlyData ,true);
 
 //var_dump($monthlyObject);
 
+/////////集計関数系
+
+$url = "";
+$url = $FINAL_URL_STRING.$FINAL_GET_SHUKEI."loginId=".$_SESSION['loginId'];
+
+//echo $url;
+//curl初期化
+$conn = curl_init();
+
+$response = "";
+
+curl_setopt($conn, CURLOPT_CONNECTTIMEOUT, 2);
+curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($conn, CURLOPT_HEADER, false);
+
+curl_setopt($conn, CURLOPT_URL, $url);
+$response = curl_exec($conn);
+
+echo $response;
+
+$response = str_replace(array("\r\n", "\r", "\n"), '', $response );
+$response = preg_replace('/(\s|　)/','',$response);
+mb_language('Japanese');
+//$response = mb_convert_encoding($response, "UTF-8", "EUC-JP")
+$responseShukeiData = str_replace('&#034;', '"', $response);
+//monthlyCountが配列
+$shukeiObject = json_decode( $responseShukeiData ,true);
 
 
-
+var_dump($shukeiObject);
 
 ?>
 
@@ -620,6 +650,8 @@ $monthlyObject = json_decode( $responseMonthlyData ,true);
                                             </p>
                                         </div>
                                         <div class="timeline-body">
+
+
                                             <p>BB2 Hit 8</p>
                                         </div>
                                     </div>
