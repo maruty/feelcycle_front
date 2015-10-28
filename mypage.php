@@ -573,11 +573,11 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
+                                        表示変更
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
+                                        <li><a href="#">インストラクター毎の受講割合</a>
                                         </li>
                                         <li><a href="#">Another action</a>
                                         </li>

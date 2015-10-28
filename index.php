@@ -82,6 +82,7 @@ if( isset( $_SESSION["loginStatus"]) &&  $_SESSION["loginStatus"] != null
                                         <input name="remember" type="checkbox" value="Remember Me">ログイン情報を保存する
                                     </label>
                                 </div>
+                                <p><a href="http://line.me/R/msg/text/?http://marubloc.com">Lineで送るテスト</a></p>
                                 <!-- Change this to a button or input when using this as a form -->
                                  <input type="submit" value="ログイン" class="btn btn-lg btn-success btn-block">
                             </fieldset>
