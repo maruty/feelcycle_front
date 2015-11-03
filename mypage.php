@@ -610,15 +610,15 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                     $count = 0;
                                                     foreach ($lessonObject as $id => $rec) {
                                                       //echo $id . PHP_EOL;
-                                                        if($count <= 40){
+                                                        //if($count <= 40){
                                                           echo "<tr>";
                                                           echo "<td>" . $rec['lessonName'] . "</td>";
                                                           echo "<td>" . $rec['lessonDate'] . "</td>";
                                                           echo "<td>" . $rec['instructor'] . "</td>";
                                                           echo "<td>" . $rec['lessonTenpo'] . "</td>";
                                                           echo " </tr>";
-                                                        }
-                                                        $count++;
+                                                        //}
+                                                        //$count++;
                                                     }
                                                     ?> 
                                             </tbody>
