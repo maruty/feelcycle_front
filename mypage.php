@@ -23,6 +23,10 @@ session_start();
     <title>Feel Analytics マイページ</title>
 
 
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
     <!-- Bootstrap Core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
