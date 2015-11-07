@@ -577,7 +577,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             url:  'http://52.69.227.6/feelcyclebatch/apiRegist/shukeiData',
                             type: 'GET',
                             data: {
-                                loginId: 'yanagisawa.trade@gmail.com'//,
+                                loginId: 'yanagisawa.trade@gmail.com',
                                 //loginPass: 'yutaka467',
                             },
                             dataType: 'json'
