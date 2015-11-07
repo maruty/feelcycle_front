@@ -575,7 +575,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
                     $.ajax({
                             url:  'http://52.69.227.6/feelcyclebatch/apiRegist/Lesson',
-                            type: 'POST',
+                            type: 'GET',
                             data: {
                                 loginId: 'yanagisawa.trade@gmail.com',
                                 loginPass: 'yutaka467',
