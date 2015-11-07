@@ -586,7 +586,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             alert("通信成功");
                             data = data.replace(/&#034;/g,'"');
                             alert(data);
-                            var json_obj = $.parseJSON(data);
+                            var json_obj = {};
+                            json_obj = $.parseJSON(data);
                             alert(json_obj);
 
                               for(var n in obj) {
