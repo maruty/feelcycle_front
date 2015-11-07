@@ -562,6 +562,24 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
 
             </div>
+
+            <script type="text/javascript">
+                $(function(){
+                    $(".summeryInstructor").on('click',function(event){
+                        alert("読み込んだ");
+
+                        //event.preventDefault();
+                        //event.stopPropagation();
+                        //location.href = 'http://hoge' + $(this).attr('href');
+                        //return false;
+                    });
+                });
+
+
+            </script>
+
+
+
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
@@ -569,7 +587,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                     <!-- /.panel -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> 過去40レッスンの受講履歴
+                            <i class="fa fa-bar-chart-o fa-fw"></i> 過去レッスンの受講履歴
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -577,7 +595,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">インストラクター毎の受講割合</a>
+                                        <li><a class="summeryInstructor" href="#">インストラクター毎の受講割合</a>
                                         </li>
                                         <li><a href="#">Another action</a>
                                         </li>
