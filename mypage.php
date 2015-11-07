@@ -593,6 +593,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         .always(function( data ) {
                                 // ...
                             alert("通信いつもの");
+                            alert(data);
                             $(".lessonData").remove();
                         });
 
