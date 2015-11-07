@@ -574,14 +574,13 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                       alert("ajax処理開始");
 
                     $.ajax({
-                            url: <?php echo "'" + $FINAL_URL_STRING + "'"; ?>,
+                            url:  'http://52.69.227.6/feelcyclebatch/apiRegist/Lesson',
                             type: 'POST',
                             data: {
-                                id: 1,
-                                mode: 'hoge',
-                                type: 'entry'
+                                loginId: 'yanagisawa.trade@gmail.com',
+                                loginPass: 'yutaka467',
                             },
-                            dataType: 'html'
+                            dataType: 'json'
                         })
                         .done(function( data ) {
                             alert("通信成功");
