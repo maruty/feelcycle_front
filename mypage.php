@@ -593,6 +593,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         .always(function( data ) {
                                 // ...
                             alert("通信いつもの");
+                            $(".lessonData").remove();
                         });
 
                     });
@@ -653,7 +654,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                     foreach ($lessonObject as $id => $rec) {
                                                       //echo $id . PHP_EOL;
                                                         //if($count <= 40){
-                                                          echo "<tr>";
+                                                          echo "<tr class='lessonData'>";
                                                           echo "<td>" . $rec['lessonName'] . "</td>";
                                                           echo "<td>" . $rec['lessonDate'] . "</td>";
                                                           echo "<td>" . $rec['instructor'] . "</td>";
