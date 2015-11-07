@@ -570,8 +570,10 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
             <script type="text/javascript">
                 $(function(){
                     // 実行したい処理
+                    $("a").click(function(){
+                      alert("aタグ .click() のイベントだよぉ〜！");
+                    });
 
-                    alert("テスト");
 
                 });
             </script>
