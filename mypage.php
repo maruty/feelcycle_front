@@ -586,6 +586,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             alert("通信成功");
                             data = data.replace(/&#034;/g,'"');
                             alert(data);
+                            var json_obj = $.parseJSON(data);
+                            alert(json_obj);
                        
                         })
                         .fail(function( data ) {
@@ -600,7 +602,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         });
 
                     });
-
+                    //Ajax後の処理？
 
 
                 });
