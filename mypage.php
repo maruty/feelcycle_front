@@ -574,7 +574,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                       alert("ajax処理開始");
 
                     $.ajax({
-                            url: <php echo "'" + $FINAL_URL_STRING + "'"; ?>,
+                            url: <?php echo "'" + $FINAL_URL_STRING + "'"; ?>,
                             type: 'POST',
                             data: {
                                 id: 1,
