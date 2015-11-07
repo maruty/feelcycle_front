@@ -564,16 +564,11 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
             </div>
 
             <script type="text/javascript">
-                $(function(){
-                    $(".summeryInstructor").on('click',function(event){
-                        alert("読み込んだ");
 
-                        //event.preventDefault();
-                        //event.stopPropagation();
-                        //location.href = 'http://hoge' + $(this).attr('href');
-                        //return false;
-                    });
+                $('.summeryInstructor').on("click", function(){
+                    alert("click!");
                 });
+
 
 
             </script>
