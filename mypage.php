@@ -590,8 +590,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             json_obj = $.parseJSON(data);
                             alert(json_obj);
 
-                              for(var n in obj) {
-                                     alert(obj[n]);
+                              for(var n in json_obj) {
+                                     alert(json_obj[n]);
                                 }
                        
                         })
