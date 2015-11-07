@@ -565,12 +565,11 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
             <script type="text/javascript">
                 $(function(){
-                    /*ここにjQueryを記述*/
-                    $('.summeryInstructor').on("click", function(){
-                        alert("click!");
-                    });
+                    // 実行したい処理
 
-                })
+                    alert("テスト");
+
+                });
             </script>
 
 
