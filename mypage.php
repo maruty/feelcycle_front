@@ -571,8 +571,32 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                 $(function(){
                     // 実行したい処理
                     $(".summeryInstructor").click(function(){
-                      alert("aタグ .click() のイベントだよぉ〜！");
+                      alert("ajax処理開始");
+
+                    $.ajax({
+                            url: 'http://user-domain/hoge.php',
+                            type: 'POST',
+                            data: {
+                                id: 1,
+                                mode: 'hoge',
+                                type: 'entry'
+                            },
+                            dataType: 'html'
+                        })
+                        .done(function( data ) {
+                            alert("通信成功");
+                        })
+                        .fail(function( data ) {
+                            alert("通信失敗");
+                                // ...
+                        })
+                        .always(function( data ) {
+                                // ...
+                            alert("通信いつもの");
+                        });
+
                     });
+
 
 
                 });
