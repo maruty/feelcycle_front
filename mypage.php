@@ -584,7 +584,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         })
                         .done(function( data ) {
                             alert("通信成功");
-                            data = data.replace('&#034;','"');
+                            data = data.replace(/&#034;/g,'"');
+                            alert(data);
                        
                         })
                         .fail(function( data ) {
@@ -594,7 +595,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         .always(function( data ) {
                                 // ...
                             alert("通信いつもの");
-                            alert(data);
+                            //alert(data);
                             $(".lessonData").remove();
                         });
 
