@@ -565,9 +565,10 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
             <script type="text/javascript">
 
-                $('.summeryInstructor').on("click", function(){
-                    alert("click!");
+                $("a").click(function(){
+                  alert("aタグ .click() のイベントだよぉ〜！");
                 });
+
 
 
 
