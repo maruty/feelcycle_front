@@ -601,7 +601,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
                             //var json_obj = JSON.stringify(jsonString);
                             var json_obj;
-                            json_obj = JSON.parse(jsonString);
+                            json_obj = JSON.stringify(jsonString);
 
                             alert("変換後" + json_obj);
                             /*
