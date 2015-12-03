@@ -597,7 +597,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             alert(jsonString);
 
                             //var json_obj = JSON.stringify(jsonString);
-                              var json_obj = JSON.parseJSON(jsonString);
+                              var json_obj = $.parseJSON(jsonString);
 
                             alert(json_obj);
                             
