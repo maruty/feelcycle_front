@@ -596,14 +596,15 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             
                             alert(jsonString);
 
-                            var json_obj = JSON.stringify(jsonString);
+                            //var json_obj = JSON.stringify(jsonString);
+                              var json_obj = JSON.parseJSON(jsonString);
 
                             alert(json_obj);
-                            /*
+                            
                               for(var n in json_obj) {
                                      alert(json_obj[n]);
                                 }
-                            */
+                            
                         })
                         .fail(function( data ) {
                             alert("通信失敗");
