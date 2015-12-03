@@ -605,10 +605,18 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                 alert("変換失敗だバーカ");
                             }
                             alert("変換後" + json_obj);
-                            
+                            /*
                               for(var n in json_obj) {
                                      alert(json_obj[n]);
                                 }
+                            */
+                            for(key in json_obj){
+                              alert(key + "さんの番号は、" + customers[key] + "です。") ;
+                            }
+
+
+                            //alert(json_obj[])
+
                             
                         })
                         .fail(function( data ) {
