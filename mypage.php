@@ -590,17 +590,19 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             //var json_obj = {};
                             // = $.parseJSON(data);
                             var jsonString = data.replace(/^\s+|\s+$/g, "");
+
+                            var jsonString = jsonString.replace(/\r?\n/g,"");
                             
                             alert(jsonString);
 
                             var json_obj = JSON.stringify(data);
 
                             alert(json_obj);
-
+                            /*
                               for(var n in json_obj) {
                                      alert(json_obj[n]);
                                 }
-                       
+                            */
                         })
                         .fail(function( data ) {
                             alert("通信失敗");
