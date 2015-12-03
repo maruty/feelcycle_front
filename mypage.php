@@ -600,7 +600,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             //var json_obj = JSON.stringify(jsonString);
                             var json_obj;
                             try{
-                                 json_obj = $.parseJSON(jsonString);
+                                 json_obj = JSON.stringify(jsonString);
                             }catch (e){
                                 alert("変換失敗だバーカ");
                             }
