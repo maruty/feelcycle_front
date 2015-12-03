@@ -592,7 +592,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             var jsonString = data.replace(/^\s+|\s+$/g, "");
 
                             var jsonString = jsonString.replace(/\r?\n/g,"");
-                            var jsonString = jsonString.replace(/\/g,"");
+                            var jsonString = jsonString.replace(/\//g,"");
                             
                             alert(jsonString);
 
