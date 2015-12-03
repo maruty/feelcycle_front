@@ -593,13 +593,15 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             var jsonString = data.replace(/^\s+|\s+$/g, "");
 
                             var jsonString = jsonString.replace(/\r?\n/g,"");
-                            var jsonString = jsonString.replace(/\//g,"");
+                            var jsonString = jsonString.replace(/\\'/g, "'");
+
+
                             
                             alert("変換前" + jsonString);
 
                             //var json_obj = JSON.stringify(jsonString);
                             var json_obj;
-                            json_obj = JSON.stringify(jsonString);
+                            json_obj = JSON.parse(jsonString);
 
                             alert("変換後" + json_obj);
                             /*
