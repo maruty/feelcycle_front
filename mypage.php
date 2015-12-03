@@ -599,11 +599,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
                             //var json_obj = JSON.stringify(jsonString);
                             var json_obj;
-                            try{
-                                 json_obj = JSON.stringify(jsonString);
-                            }catch (e){
-                                alert("変換失敗だバーカ");
-                            }
+                            json_obj = JSON.stringify(jsonString);
+
                             alert("変換後" + json_obj);
                             /*
                               for(var n in json_obj) {
