@@ -594,12 +594,16 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             var jsonString = jsonString.replace(/\r?\n/g,"");
                             var jsonString = jsonString.replace(/\//g,"");
                             
-                            alert(jsonString);
+                            alert("変換前" + jsonString);
 
                             //var json_obj = JSON.stringify(jsonString);
-                              var json_obj = $.parseJSON(jsonString);
-
-                            alert(json_obj);
+                            var json_obj;
+                            try{
+                                 json_obj = $.parseJSON(jsonString);
+                            }catch (e){
+                                alert("変換失敗だバーカ");
+                            }
+                            alert("変換後" + json_obj);
                             
                               for(var n in json_obj) {
                                      alert(json_obj[n]);
