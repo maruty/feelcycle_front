@@ -588,8 +588,12 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             alert(data);
                             //var json_obj = {};
                             // = $.parseJSON(data);
+                            var jsonString = data.replace(/^\s+|\s+$/g, "");
+                            
+                            alert(jsonString);
 
                             var json_obj = JSON.parse(data);
+
                             alert(json_obj);
 
                               for(var n in json_obj) {
