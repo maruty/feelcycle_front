@@ -609,7 +609,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             */
                             
                             for(key in json_obj){
-                              alert(key + "さんの番号は、" + customers[key] + "です。") ;
+                              alert(key + "さんの番号は、" + json_obj[key] + "です。") ;
                             }
                             
 
