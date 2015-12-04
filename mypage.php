@@ -70,7 +70,7 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 
 /////レッスン情報取得関係
 
-$FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/";
+$FINAL_URL_STRING = "http://52.193.59.127/feelcyclebatch/apiRegist/";
 $FINAL_GET_LESSION = "Lesson?";
 $FINAL_GET_USERDATA = "UserData?"; 
 $FINAL_GET_MONTHLY = "LessonMonthlyData?";

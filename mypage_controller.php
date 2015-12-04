@@ -14,7 +14,7 @@
     }
 
 
-    $FINAL_URL_STRING = "http://52.69.227.6/feelcyclebatch/apiRegist/checkUser?";
+    $FINAL_URL_STRING = "http://52.193.59.127/feelcyclebatch/apiRegist/checkUser?";
     //URL組み立て用
     $url = "";
 
