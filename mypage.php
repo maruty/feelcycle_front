@@ -595,8 +595,10 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
                             //json型に変換する
                             var json_obj = JSON.parse(jsonString);
-                            alert(json_obj.shukei[0].shukeiValue);
+                            //alert(json_obj.shukei[0].shukeiValue);
                             //実際のappend処理
+
+                            $("#lessonDisplayArea th.text").text("書き換え");
 
 
 
@@ -657,6 +659,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="table-responsive">
+                                        <div id="lessonDisplayArea">
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
                                                 <tr>
@@ -685,6 +688,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                     ?> 
                                             </tbody>
                                         </table>
+                                        </div>
                                     </div>
                                     <!-- /.table-responsive -->
                                 </div>
