@@ -574,7 +574,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                       alert("ajax処理開始");
 
                     $.ajax({
-                            url:  'http://52.69.227.6/feelcyclebatch/apiRegist/shukeiData',
+                            url:  'http://52.193.59.127/feelcyclebatch/apiRegist/shukeiData',
                             type: 'GET',
                             data: {
                                 loginId: 'yanagisawa.trade@gmail.com',
