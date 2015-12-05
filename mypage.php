@@ -602,9 +602,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             $(".zyukobi").text("回数");
                             $(".IRName").remove();
                             $(".kaizyo").remove();
-                            $(".instructorData").remove();
-                            $(".lessonTenpoData").remove();
-                            
+                            $(".lessonData").remove();
 
 
 
