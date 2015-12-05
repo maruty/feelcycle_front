@@ -598,8 +598,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             //alert(json_obj.shukei[0].shukeiValue);
                             //実際のappend処理
 
-                            $("#lessonDisplayArea th.text").text("書き換え");
-
+                            $("#lessonDisplayArea").children("th").text("かきかえ");
 
 
 
