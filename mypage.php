@@ -617,6 +617,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             if(json_obj instanceof Array){
                                //配列だよ
                                alert("jsonオブジェクトは配列だよ")
+                            }else{
+                                alert("配列じゃないよ")
                             }
 
 
