@@ -580,8 +580,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                 loginId: 'yanagisawa.trade@gmail.com',
                                 //loginPass: 'yutaka467',
                             },
-                            dataType: 'html json',
-                            cache: false
+                            dataType: 'text json',
+                            //cache: false
                            // contentType: 'application/json'
                         })
                         .done(function( data ) {
