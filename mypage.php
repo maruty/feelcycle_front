@@ -598,7 +598,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             //alert(json_obj.shukei[0].shukeiValue);
                             //実際のappend処理
 
-                            $("#lessonDisplayArea").children("th").text("かきかえ");
+                            $(".lessonName").text("レッスン月");
+                            $(".zyukobi").text("回数");
 
 
 
@@ -658,14 +659,13 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="table-responsive">
-                                        <div id="lessonDisplayArea">
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>Lesson名</th>
-                                                    <th>受講日</th>
-                                                    <th>IR</th>
-                                                    <th>会場</th>
+                                                    <th class"lessonName">Lesson名</th>
+                                                    <th class"zyukobi">受講日</th>
+                                                    <th class"IRName">IR</th>
+                                                    <th class"kaizyo">会場</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -687,7 +687,6 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                     ?> 
                                             </tbody>
                                         </table>
-                                        </div>
                                     </div>
                                     <!-- /.table-responsive -->
                                 </div>
