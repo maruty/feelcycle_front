@@ -600,10 +600,8 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
                             $(".lessonName").text("レッスン月");
                             $(".zyukobi").text("回数");
-
-
-
-
+                            $(".IRName").remove();
+                            $(".kaizyo").remove();
 
                         })
                         .fail(function( data ) {
@@ -614,7 +612,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                 // ...
                             alert("通信いつもの");
                             //alert(data);
-                            alert($('.lessonName').html());
+                           
                         });
 
                     });
