@@ -586,54 +586,23 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         })
                         .done(function( data ) {
                             alert("通信成功");
-                            data = data.replace(/&#034;/g,'"');
-                            alert(data);
-                            //var json_obj = {};
-                            // = $.parseJSON(data);
-                            var jsonString = data.replace(/^\s+|\s+$/g, "");
 
+                            //データをhtmlのエスケープで変換されているのでそれを元に戻す
+                            data = data.replace(/&#034;/g,'"');
+                            var jsonString = data.replace(/^\s+|\s+$/g, "");
                             var jsonString = jsonString.replace(/\r?\n/g,"");
                             var jsonString = jsonString.replace(/\\'/g, "'");
 
-
-                            
-                            alert("変換前" + jsonString);
-
-                            //var json_obj = JSON.stringify(jsonString);
-                            //var json_obj;
-                            //json_obj = JSON.stringify(jsonString);
-                            //json_obj = $.parseJSON(data);
-                            //json_obj = $.parseJSON(json_obj);
-
-
+                            //json型に変換する
                             var json_obj = JSON.parse(jsonString);
-                            //var json_obj = (new Function("return " + data))();
-
-
-                            alert("変換後" + json_obj);
-                            /*
-                              for(var n in json_obj) {
-                                     alert(json_obj[n]);
-                                }
-                            */
-                            if(json_obj instanceof Array){
-                               //配列だよ
-                               alert("jsonオブジェクトは配列だよ")
-                            }else{
-                                alert("配列じゃないよ")
-                            }
-
-
                             alert(json_obj.shukei[0].shukeiValue);
-                            /*
-                            for(key in json_obj){
-                              alert(key + "さんの番号は、" + json_obj[key] + "です。") ;
-                            }
-                            */
-
-                            //alert(json_obj[])
-
+                            //実際のappend処理
                             
+
+
+
+
+
                         })
                         .fail(function( data ) {
                             alert("通信失敗");
