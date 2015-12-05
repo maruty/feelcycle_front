@@ -581,7 +581,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                 //loginPass: 'yutaka467',
                             },
                             dataType: 'text',
-                            //cache: false
+                            cache: false
                            // contentType: 'application/json'
                         })
                         .done(function( data ) {
