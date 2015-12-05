@@ -571,7 +571,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                 $(function(){
                     // 実行したい処理
                     $(".summeryInstructor").click(function(){
-                      alert("ajax処理開始");
+                      //alert("ajax処理開始");
 
                     $.ajax({
                             url:  'http://52.193.59.127/feelcyclebatch/apiRegist/monthlyLessonData',
@@ -585,7 +585,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                            // contentType: 'application/json'
                         })
                         .done(function( data ) {
-                            alert("通信成功");
+                            //alert("通信成功");
 
                             //データをhtmlのエスケープで変換されているのでそれを元に戻す
                             data = data.replace(/&#034;/g,'"');
@@ -609,9 +609,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                     $(".rowDisplayedData").append("<tr><td class='lessonName'>" + json_obj.shukei[i].shukeiName + "</td><td class='zyukobi'>"
                                                                                                 + json_obj.shukei[i].shukeiValue+ "回</td></tr>");
                                     //$(".zyukobi").append("</tr>");
-    
-
-                                
+                                    
                             }
 
 
@@ -620,12 +618,12 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
                         })
                         .fail(function( data ) {
-                            alert("通信失敗");
+                            //alert("通信失敗");
                                 // ...
                         })
                         .always(function( data ) {
                                 // ...
-                            alert("通信いつもの");
+                            //alert("通信いつもの");
                             //alert(data);
 
                         });
