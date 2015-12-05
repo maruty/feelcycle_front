@@ -600,10 +600,13 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             alert("変換前" + jsonString);
 
                             //var json_obj = JSON.stringify(jsonString);
-                            var json_obj;
+                            //var json_obj;
                             //json_obj = JSON.stringify(jsonString);
-                            json_obj = $.parseJSON(data);
+                            //json_obj = $.parseJSON(data);
 
+                            var json_obj = (new Function("return " + data))();
+
+                            
                             alert("変換後" + json_obj);
                             /*
                               for(var n in json_obj) {
