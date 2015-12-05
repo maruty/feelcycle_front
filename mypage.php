@@ -662,10 +662,10 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th class"lessonName">Lesson名</th>
-                                                    <th class"zyukobi">受講日</th>
-                                                    <th class"IRName">IR</th>
-                                                    <th class"kaizyo">会場</th>
+                                                    <th class="lessonName">Lesson名</th>
+                                                    <th class="zyukobi">受講日</th>
+                                                    <th class="IRName">IR</th>
+                                                    <th class="kaizyo">会場</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
