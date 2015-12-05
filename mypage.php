@@ -577,7 +577,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             url:  'http://52.193.59.127/feelcyclebatch/apiRegist/monthlyLessonData',
                             type: 'GET',
                             data: {
-                                loginId: <?php "\'" + echo $_SESSION['loginId']; + "\'" ?>,
+                                loginId: '<?php echo $_SESSION['loginId']; ?>',
                                 //loginPass: 'yutaka467',
                             },
                             dataType: 'text',
