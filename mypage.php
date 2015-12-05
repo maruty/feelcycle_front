@@ -599,12 +599,14 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             
                             alert("変換前" + jsonString);
 
-                            var json_obj = JSON.stringify(jsonString);
+                            //var json_obj = JSON.stringify(jsonString);
                             //var json_obj;
                             //json_obj = JSON.stringify(jsonString);
                             //json_obj = $.parseJSON(data);
-                            var json_obj = $.parseJSON(json_obj);
+                            //json_obj = $.parseJSON(json_obj);
 
+
+                            var json_obj = JSON.parse(jsonString);
                             //var json_obj = (new Function("return " + data))();
 
 
