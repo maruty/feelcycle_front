@@ -604,6 +604,13 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             $(".kaizyo").remove();
                             $(".lessonData").remove();
 
+                            for (var i = 0; i < json_obj.shukei.length; i++) {
+                                    $(".rowDisplayedData").append(json_obj.shukei[i].shukeiName);
+                                    $(".rowDisplayedData").append(json_obj.shukei[i].shukeiValue);
+    
+
+                                
+                            }
 
 
 
@@ -618,7 +625,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                 // ...
                             alert("通信いつもの");
                             //alert(data);
-                            alert($('.lessonName').html());
+
                         });
 
                     });
@@ -672,7 +679,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                     <th class="kaizyo">会場</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody class="rowDisplayedData">
                                                 
                                               <?php
                                                     $count = 0;
