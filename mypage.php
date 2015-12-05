@@ -605,10 +605,10 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             $(".lessonData").remove();
 
                             for (var i = 0; i < json_obj.shukei.length; i++) {
-                                    $(".lessonName").prepend("<tr>");
-                                    $(".rowDisplayedData").append("<td class='lessonName'>" + json_obj.shukei[i].shukeiName + "</td>");
-                                    $(".rowDisplayedData").append("<td class='zyukobi'>" + json_obj.shukei[i].shukeiValue+ "</td>");
-                                    $(".zyukobi").append("</tr>");
+                                    //$(".lessonName").prepend("<tr>");
+                                    $(".rowDisplayedData").append("<tr><td class='lessonName'>" + json_obj.shukei[i].shukeiName + "</td>");
+                                    $(".rowDisplayedData").append("<td class='zyukobi'>" + json_obj.shukei[i].shukeiValue+ "</td></tr>");
+                                    //$(".zyukobi").append("</tr>");
     
 
                                 
