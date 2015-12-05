@@ -607,6 +607,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             for (var i = 0; i < json_obj.shukei.length; i++) {
                                     //$(".lessonName").prepend("<tr>");
                                     $(".rowDisplayedData").append("<td class='lessonName'>" + json_obj.shukei[i].shukeiName + "</td>");
+                                    $(".lessonName").append("<td class='lessonName'>" + json_obj.shukei[i].shukeiName + "回</td>");
                                     $(".rowDisplayedData").append("<td class='zyukobi'>" + json_obj.shukei[i].shukeiValue+ "</td></br>");
                                     //$(".zyukobi").append("</tr>");
     
