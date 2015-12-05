@@ -614,6 +614,12 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                      alert(json_obj[n]);
                                 }
                             */
+                            if(json_obj instanceof Array){
+                               //配列だよ
+                               alert("jsonオブジェクトは配列だよ")
+                            }
+
+
                             alert(json_obj.shukei[0].shukeiName);
                             /*
                             for(key in json_obj){
