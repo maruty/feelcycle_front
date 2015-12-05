@@ -602,6 +602,14 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             $(".zyukobi").text("回数");
                             $(".IRName").remove();
                             $(".kaizyo").remove();
+                            $(".instructorData").remove();
+                            $(".lessonTenpoData").remove();
+                            
+
+
+
+
+
 
                         })
                         .fail(function( data ) {
@@ -612,7 +620,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                 // ...
                             alert("通信いつもの");
                             //alert(data);
-                           
+                            alert($('.lessonName').html());
                         });
 
                     });
@@ -674,10 +682,10 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                       //echo $id . PHP_EOL;
                                                         //if($count <= 40){
                                                           echo "<tr class='lessonData'>";
-                                                          echo "<td>" . $rec['lessonName'] . "</td>";
-                                                          echo "<td>" . $rec['lessonDate'] . "</td>";
-                                                          echo "<td>" . $rec['instructor'] . "</td>";
-                                                          echo "<td>" . $rec['lessonTenpo'] . "</td>";
+                                                          echo "<td class='lessonNameData'>" . $rec['lessonName'] . "</td>";
+                                                          echo "<td class='lessonDateData'>" . $rec['lessonDate'] . "</td>";
+                                                          echo "<td class='instructorData'>" . $rec['instructor'] . "</td>";
+                                                          echo "<td class='lessonTenpoData'>" . $rec['lessonTenpo'] . "</td>";
                                                           echo " </tr>";
                                                         //}
                                                         //$count++;
