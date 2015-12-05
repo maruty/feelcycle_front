@@ -614,7 +614,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                 // ...
                             alert("通信いつもの");
                             //alert(data);
-                            $(".lessonData").remove();
+                            alert($('.lessonName').html());
                         });
 
                     });
