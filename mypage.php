@@ -652,7 +652,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a class="summeryInstructor" href="#">インストラクター毎の受講割合</a>
+                                        <li><a class="summeryInstructor" href="#">月ごとのレッスン回数</a>
                                         </li>
                                         <li><a href="#">Another action</a>
                                         </li>
