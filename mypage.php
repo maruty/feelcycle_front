@@ -574,10 +574,10 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                       alert("ajax処理開始");
 
                     $.ajax({
-                            url:  'http://52.193.59.127/feelcyclebatch/apiRegist/shukeiData',
+                            url:  'http://52.193.59.127/feelcyclebatch/apiRegist/monthlyLessonData',
                             type: 'GET',
                             data: {
-                                loginId: 'yanagisawa.trade@gmail.com',
+                                loginId: <?php echo $_SESSION['loginId']; ?>,
                                 //loginPass: 'yutaka467',
                             },
                             dataType: 'text',
@@ -597,7 +597,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             var json_obj = JSON.parse(jsonString);
                             alert(json_obj.shukei[0].shukeiValue);
                             //実際のappend処理
-                            
+
 
 
 
