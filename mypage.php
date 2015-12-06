@@ -603,6 +603,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             $(".IRName").remove();
                             $(".kaizyo").remove();
                             $(".lessonData").remove();
+                            $('.summeryInstructor').css('pointer-events', 'none');
 
                             for (var i = 0; i < json_obj.shukei.length; i++) {
                                     //$(".lessonName").prepend("<tr>");
