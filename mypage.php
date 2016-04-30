@@ -70,7 +70,7 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 
 /////レッスン情報取得関係
 
-$FINAL_URL_STRING = "http://52.193.59.127/feelcyclebatch/apiRegist/";
+$FINAL_URL_STRING = "http://133.242.235.62:8008/feelcyclebatch/apiRegist/";
 $FINAL_GET_LESSION = "Lesson?";
 $FINAL_GET_USERDATA = "UserData?"; 
 $FINAL_GET_MONTHLY = "LessonMonthlyData?";
@@ -574,7 +574,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                       //alert("ajax処理開始");
 
                     $.ajax({
-                            url:  'http://52.193.59.127/feelcyclebatch/apiRegist/monthlyLessonData',
+                            url:  'http://133.242.235.62:8008/feelcyclebatch/apiRegist/monthlyLessonData',
                             type: 'GET',
                             data: {
                                 loginId: '<?php echo $_SESSION['loginId']; ?>',
