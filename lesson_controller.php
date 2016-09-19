@@ -12,7 +12,7 @@
     );
 
     // 連想配列($array)をJSONに変換(エンコード)する
-    $json = json_encode( $array , JSON_PRETTY_PRINT ) ;
+    $json = json_encode( $array);
 
     echo $json;
 
