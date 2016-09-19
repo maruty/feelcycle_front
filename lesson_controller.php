@@ -8,7 +8,7 @@
         "lessonName" => $_POST["lesson"] ,
         "lessonDate" => $_POST["date"] ,
         "lessonTime" => $_POST["time"] ,
-        "lessonState" => $_POST["tempo"] 
+        "lessonState" => $_POST["tenpo"] 
     );
 
     // 連想配列($array)をJSONに変換(エンコード)する
@@ -20,6 +20,8 @@
     @fwrite( $fp, $json, strlen($json) ); // ファイルへの書き込み
     fclose($fp);
     //ファイルへの書き込みは終了
+
+    var_dump($array);
 
     echo "レッスン情報はサーバーに送信されました";
 
