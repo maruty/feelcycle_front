@@ -81,9 +81,9 @@
                                 
 
                                 */
-                                    foreach ($array as $key1 => $value1) {
+                                    foreach ($dataLessonMaster as $key1 => $value1) {
                                       foreach ($value1 as $key2 => $value2) {
-                                        print $dataLessonMaster . ", "; //「.」は文字列連結
+                                        echo $dataLessonMaster . ", "; //「.」は文字列連結
                                       }
                                     }
 
