@@ -22,7 +22,7 @@
 
     if ($fp){
         if (flock($fp, LOCK_EX)){
-            if (fwrite( $fp, $json, strlen($json)  === FALSE){
+            if (fwrite( $fp, $json, strlen($json))  === FALSE){
                 print('ファイル書き込みに失敗しました');
             }else{
                 print($json.'をファイルに書き込みました');
