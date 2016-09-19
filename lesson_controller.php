@@ -14,7 +14,7 @@
     // 連想配列($array)をJSONに変換(エンコード)する
     $json = json_encode( $array , JSON_PRETTY_PRINT ) ;
 
-    $filepath = "/var/www/html/json/lesson.json"; // ファイルへのパスを変数に格納
+    $filepath = "../json/lesson.json"; // ファイルへのパスを変数に格納
     
     $fp = fopen($filepath, "w"); // 新規書き込みモードで開く
     @fwrite( $fp, $json, strlen($json) ); // ファイルへの書き込み
