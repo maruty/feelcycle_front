@@ -86,7 +86,7 @@
                                         //echo "==========================";
                                         echo "<div class='form-group'>";
                                         if($count === 0){
-                                            echo "<select name='example1'>";
+                                            echo "<select name='example1' class='form-control'>";
 
                                         }
                                         if($count === 1){
@@ -109,6 +109,7 @@
                                     }
 
                                 ?>
+                                 <input type="submit" value="ログイン" class="btn btn-lg btn-success btn-block">
 
                             </fieldset>
                         </form>
