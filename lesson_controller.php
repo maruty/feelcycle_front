@@ -16,24 +16,16 @@
 
     echo $json;
 
-    $filepath = "../json/lesson.json"; // ファイルへのパスを変数に格納
-    
-    $fp = fopen($filepath, "w"); // 新規書き込みモードで開く
 
-    if ($fp){
-        if (flock($fp, LOCK_EX)){
-            if (fwrite( $fp, $json, strlen($json))  === FALSE){
-                print('ファイル書き込みに失敗しました');
-            }else{
-                print($json.'をファイルに書き込みました');
-            }
+    if(!$FP = fopen("../json/lesson.json","w"))
+        echo "error";
 
-            flock($fp, LOCK_UN);
-        }else{
-            print('ファイルロックに失敗しました');
+    else{
+        fwrite($FP,$json);
+        fclose($FP);
     }
 
-    fclose($fp);
+
     //ファイルへの書き込みは終了
 
     var_dump($array);
