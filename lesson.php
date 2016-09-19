@@ -67,7 +67,7 @@
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="9/19(月)" name="date" type="text" value="">
+                                    <input class="form-control" placeholder="9/19(月)かっこは半角" name="date" type="text" value="">
                                 </div>
                                 <?php
                                 /*
@@ -112,7 +112,7 @@
                                     }
 
                                 ?>
-                                 <input type="submit" value="ログイン" class="btn btn-lg btn-success btn-block">
+                                 <input type="submit" value="レッスンを取得する" class="btn btn-lg btn-success btn-block">
 
                             </fieldset>
                         </form>
