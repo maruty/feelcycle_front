@@ -99,7 +99,7 @@
 
 
                                         foreach ($value1 as $key2 => $value2) {
-                                            echo "<option value='" . key2 ."'>" . $key2 . "</option>";
+                                            echo "<option value='" . $key2 ."'>" . $key2 . "</option>";
                                         }
 
                                         echo "</select>";
