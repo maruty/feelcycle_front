@@ -19,7 +19,7 @@
 
     if(!$FP = fopen("../json/lesson.json","w"))
         echo "error";
-        echo '捕捉した例外: ',  $e->getMessage(), "\n";
+
 
     else{
         fwrite($FP,$json);
