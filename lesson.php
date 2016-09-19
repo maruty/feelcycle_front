@@ -66,6 +66,9 @@
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="9/19(月)" name="date" type="text" value="">
+                                </div>
                                 <?php
                                 /*
                                     foreach ($array as $value) { //3回繰り返し
@@ -86,15 +89,15 @@
                                         //echo "==========================";
                                         echo "<div class='form-group'>";
                                         if($count === 0){
-                                            echo "<select name='example1' class='form-control'>";
+                                            echo "<select name='lesson' class='form-control'>";
 
                                         }
                                         if($count === 1){
-                                            echo "<select name='example2' class='form-control'>";
+                                            echo "<select name='tenpo' class='form-control'>";
                                         }
 
                                         if($count === 2){
-                                            echo "<select name='example3' class='form-control'>";
+                                            echo "<select name='time' class='form-control'>";
                                         }
 
 
