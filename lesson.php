@@ -6,7 +6,7 @@
     }
     $dataLessonMaster = json_decode($json, true);
 
-    var_dump($dataLessonMaster);
+    //var_dump($dataLessonMaster);
 
 
 
@@ -66,7 +66,6 @@
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
-                                <div class="form-group">
                                 <?php
                                 /*
                                     foreach ($array as $value) { //3回繰り返し
@@ -83,8 +82,9 @@
                                 */
                                     $count = 0;
                                     foreach ($dataLessonMaster as $key1 => $value1) {
-                                        var_dump($value1);
-                                        echo "==========================";
+                                        //var_dump($value1);
+                                        //echo "==========================";
+                                        echo "<div class='form-group'>";
                                         if($count === 0){
                                             echo "<select name='example1'>";
 
@@ -103,24 +103,13 @@
                                         }
 
                                         echo "</select>";
+                                        echo "</div>";
                                         $count++;
 
                                     }
 
                                 ?>
 
-
-
-                                    <select name="example">
-                                        <option value="選択肢1">選択肢1</option>
-                                        <option value="選択肢2">選択肢2</option>
-                                        <option value="選択肢3">選択肢3</option>
-                                    </select>
-                                    <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
-                                </div>
-
-                                <!-- Change this to a button or input when using this as a form -->
-                                 <input type="submit" value="ログイン" class="btn btn-lg btn-success btn-block">
                             </fieldset>
                         </form>
                     </div>
