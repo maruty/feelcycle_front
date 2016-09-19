@@ -58,7 +58,7 @@
                         <h3 class="panel-title">Feel 俺俺取得</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" method="post" action="./mypage_controller.php" >
+                        <form role="form" method="post" action="./lesson_controller.php" >
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="loginId" type="email" autofocus>
@@ -90,16 +90,16 @@
 
                                         }
                                         if($count === 1){
-                                            echo "<select name='example2'>";
+                                            echo "<select name='example2' class='form-control'>";
                                         }
 
                                         if($count === 2){
-                                            echo "<select name='example3'>";
+                                            echo "<select name='example3' class='form-control'>";
                                         }
 
 
                                         foreach ($value1 as $key2 => $value2) {
-                                            echo "<option value='" . $value2 ."'>" . $key2 . "</option>";
+                                            echo "<option value='" . key2 ."'>" . $key2 . "</option>";
                                         }
 
                                         echo "</select>";
