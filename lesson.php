@@ -4,9 +4,11 @@
     if ($json === false) {
         throw new \RuntimeException('file not found.');
     }
-    $data = json_decode($json, true);
+    $dataLessonMaster = json_decode($json, true);
 
-    var_dump($data);
+    var_dump($dataLessonMaster);
+
+
 
 
 ?>
@@ -64,11 +66,39 @@
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">ログイン情報を保存する
-                                    </label>
+                                <div class="form-group">
+                                <?php
+                                /*
+                                    foreach ($array as $value) { //3回繰り返し
+                                      echo $value['ID'];    // 7 → 6 → 5
+                                      echo $value['title']; // 多次元配列の扱い →（略）
+                                    }
+                                    連想配列の連想配列から値を取得したい場合はforeach文のネスト。
+                                    foreach ($array as $key1 => $value1) {
+                                      foreach ($value1 as $key2 => $value2) {
+                                        print $value2 . ", "; //「.」は文字列連結
+                                      }
+                                
+
+                                */
+                                    foreach ($array as $key1 => $value1) {
+                                      foreach ($value1 as $key2 => $value2) {
+                                        print $dataLessonMaster . ", "; //「.」は文字列連結
+                                      }
+                                    }
+
+                                ?>
+
+
+
+                                    <select name="example">
+                                        <option value="選択肢1">選択肢1</option>
+                                        <option value="選択肢2">選択肢2</option>
+                                        <option value="選択肢3">選択肢3</option>
+                                    </select>
+                                    <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
+
                                 <!-- Change this to a button or input when using this as a form -->
                                  <input type="submit" value="ログイン" class="btn btn-lg btn-success btn-block">
                             </fieldset>
