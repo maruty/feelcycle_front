@@ -81,12 +81,30 @@
                                 
 
                                 */
+                                    $count = 0;
                                     foreach ($dataLessonMaster as $key1 => $value1) {
                                         var_dump($value1);
                                         echo "==========================";
-                                      foreach ($value1 as $key2 => $value2) {
-                                        //echo $dataLessonMaster . ", "; //「.」は文字列連結
-                                      }
+                                        if($count === 0){
+                                            echo "<select name='example1'>";
+
+                                        }
+                                        if($count === 1){
+                                            echo "<select name='example2'>";
+                                        }
+
+                                        if($count === 2){
+                                            echo "<select name='example3'>";
+                                        }
+
+
+                                        foreach ($value1 as $key2 => $value2) {
+                                            echo "<option value='" . $value2 ."'>" . $key2 . "</option>";
+                                        }
+
+                                        echo "</select>";
+                                        $count++;
+
                                     }
 
                                 ?>
