@@ -83,6 +83,7 @@
                                 */
                                     foreach ($dataLessonMaster as $key1 => $value1) {
                                         var_dump($value1);
+                                        echo "==========================";
                                       foreach ($value1 as $key2 => $value2) {
                                         //echo $dataLessonMaster . ", "; //「.」は文字列連結
                                       }
