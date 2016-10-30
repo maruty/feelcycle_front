@@ -173,7 +173,7 @@ $monthlyObject = json_decode( $responseMonthlyData ,true);
 $url = "";
 $url = $FINAL_URL_STRING.$FINAL_GET_SHUKEI."loginId=".$_SESSION['loginId'];
 
-//echo $url;
+echo $url;
 //curl初期化
 $conn = curl_init();
 
