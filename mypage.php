@@ -584,7 +584,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                            // contentType: 'application/json'
                         })
                         .done(function( data ) {
-                            alert("通信成功");
+                            //alert("通信成功");
 
                             //データをhtmlのエスケープで変換されているのでそれを元に戻す
                             data = data.replace(/&#034;/g,'"');
@@ -624,8 +624,9 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         })
                         .always(function( data ) {
                                 // ...
-                            alert("通信いつもの");
+                            //alert("通信いつもの");
                             //alert(data);
+                            $('body').css('opacity', '.2').animate({'opacity': '1'}, 'slow');
 
                         });
 
@@ -655,7 +656,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                            // contentType: 'application/json'
                         })
                         .done(function( data ) {
-                            alert("通信成功");
+                            //alert("通信成功");
 
                             //データをhtmlのエスケープで変換されているのでそれを元に戻す
                             data = data.replace(/&#034;/g,'"');
@@ -695,8 +696,9 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         })
                         .always(function( data ) {
                                 // ...
-                            alert("通信いつもの");
+                            //alert("通信いつもの");
                             //alert(data);
+                            $('body').css('opacity', '.2').animate({'opacity': '1'}, 'slow');
 
                         });
 
