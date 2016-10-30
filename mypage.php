@@ -197,15 +197,7 @@ $responseShukeiData = str_replace('&#034;', '"', $response);
 //monthlyCountが配列
 $shukeiObject = json_decode( $responseShukeiData ,true);
 
-      foreach ($shukeiObject as $id => $rec) {
-          if($rec['shukeiName'] === "MaxLessoname"){
-              echo "test" . $rec['shukeiValue'];
-          }
-      }
-
-
-
-//var_dump($shukeiObject);
+var_dump($shukeiObject);
 
 ?>
 
