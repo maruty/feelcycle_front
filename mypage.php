@@ -736,12 +736,10 @@ var_dump($shukeiObject);
 
                                               <?php
 
-                                              foreach ( $shukeiObject as $key=>$val){
-                                                  foreach ( $val as $key2=>$val2){
-                                                    if($key2['shukeiName'] === "MaxLessoname"){
-                                                        echo $val2['shukeiValue'];
-                                                    }
-                                                  }
+                                              foreach ($shukeiObject as $key1 => $value1) {
+                                                foreach ($value1 as $key2 => $value2) {
+                                                    print $value2 . ", "; //「.」は文字列連結
+                                                }
                                               }
 
                                                     /*
