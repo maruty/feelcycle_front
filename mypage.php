@@ -710,6 +710,78 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
             </script>
 
 
+            <script type="text/javascript">
+                $(function(){
+                    // 実行したい処理
+                    $(".summeryInst").click(function(){
+                      //alert("ajax処理開始");
+
+                    $.ajax({
+                            url:  'http://133.242.235.62:8080/feelcyclebatch/apiRegist/instructorCountInformation',
+                            type: 'GET',
+                            data: {
+                                loginId: '<?php echo $_SESSION['loginId']; ?>',
+                                //loginPass: 'yutaka467',
+                            },
+                            dataType: 'text',
+                            cache: false
+                           // contentType: 'application/json'
+                        })
+                        .done(function( data ) {
+                            //alert("通信成功");
+
+                            //データをhtmlのエスケープで変換されているのでそれを元に戻す
+                            data = data.replace(/&#034;/g,'"');
+                            var jsonString = data.replace(/^\s+|\s+$/g, "");
+                            var jsonString = jsonString.replace(/\r?\n/g,"");
+                            var jsonString = jsonString.replace(/\\'/g, "'");
+
+                            //json型に変換する
+                            var json_obj = JSON.parse(jsonString);
+                            //alert(json_obj.shukei[0].shukeiValue);
+                            //実際のappend処理
+
+                            $(".lessonName").text("インストラクター名");
+                            $(".zyukobi").text("受講回数");
+                            $(".IRName").remove();
+                            $(".kaizyo").remove();
+                            $(".lessonData").remove();
+                            $('.summeryInst').css('pointer-events', 'none');
+                            $('.summeryInst').css('font-color', 'gray');
+
+                            for (var i = 0; i < json_obj.shukei.length; i++) {
+                                    //$(".lessonName").prepend("<tr>");
+                                    $(".rowDisplayedData").append("<tr><td class='lessonName'>" + json_obj.shukei[i].shukeiName + "</td><td class='zyukobi'>"
+                                                                                                + json_obj.shukei[i].shukeiValue+ "回</td></tr>");
+                                    //$(".zyukobi").append("</tr>");
+
+                            }
+
+
+
+
+
+                        })
+                        .fail(function( data ) {
+                            alert("通信失敗");
+                                // ...
+                        })
+                        .always(function( data ) {
+                                // ...
+                            //alert("通信いつもの");
+                            //alert(data);
+                            $('body').css('opacity', '.2').animate({'opacity': '1'}, 'slow');
+
+                        });
+
+                    });
+                    //Ajax後の処理？
+
+
+                });
+            </script>
+
+
 
             <!-- /.row -->
             <div class="row">
@@ -730,10 +802,10 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                         </li>
                                         <li><a class="summeryLesson" href="#">レッスンごとの受講回数</a>
                                         </li>
-                                        <li><a href="#">Something else here</a>
+                                        <li><a class="summeryInst" href="#">インストラクターごとの受講回数</a>
                                         </li>
                                         <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
+                                        <li><a href="#">そのうちなんか作るかも</a>
                                         </li>
                                     </ul>
                                 </div>
