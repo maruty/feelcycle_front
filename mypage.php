@@ -173,7 +173,7 @@ $monthlyObject = json_decode( $responseMonthlyData ,true);
 $url = "";
 $url = $FINAL_URL_STRING.$FINAL_GET_SHUKEI."loginId=".$_SESSION['loginId'];
 
-echo $url;
+//echo $url;
 //curl初期化
 $conn = curl_init();
 
@@ -197,7 +197,7 @@ $responseShukeiData = str_replace('&#034;', '"', $response);
 //monthlyCountが配列
 $shukeiObject = json_decode( $responseShukeiData ,true);
 
-var_dump($shukeiObject);
+//var_dump($shukeiObject);
 
 ?>
 
@@ -584,7 +584,7 @@ var_dump($shukeiObject);
                            // contentType: 'application/json'
                         })
                         .done(function( data ) {
-                            //alert("通信成功");
+                            alert("通信成功");
 
                             //データをhtmlのエスケープで変換されているのでそれを元に戻す
                             data = data.replace(/&#034;/g,'"');
@@ -737,7 +737,6 @@ var_dump($shukeiObject);
                                               <?php
 
                                               foreach ($shukeiObject as $key1 => $value1) {
-                                                print $key1;
                                                 foreach ($value1 as $key2 => $value2) {
                                                     if($value2['shukeiName']=== "MaxLessoname"){
                                                       print $value2['shukeiValue'];
@@ -779,7 +778,6 @@ var_dump($shukeiObject);
                                               <?php
 
                                               foreach ($shukeiObject as $key1 => $value1) {
-                                                print $key1;
                                                 foreach ($value1 as $key2 => $value2) {
                                                     if($value2['shukeiName']=== "MaxInstroctor"){
                                                       print $value2['shukeiValue'];
