@@ -637,6 +637,77 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
             </script>
 
 
+            <script type="text/javascript">
+                $(function(){
+                    // 実行したい処理
+                    $(".summeryLesson").click(function(){
+                      //alert("ajax処理開始");
+
+                    $.ajax({
+                            url:  'http://133.242.235.62:8080/feelcyclebatch/apiRegist/lessonCountInformation',
+                            type: 'GET',
+                            data: {
+                                loginId: '<?php echo $_SESSION['loginId']; ?>',
+                                //loginPass: 'yutaka467',
+                            },
+                            dataType: 'text',
+                            cache: false
+                           // contentType: 'application/json'
+                        })
+                        .done(function( data ) {
+                            alert("通信成功");
+
+                            //データをhtmlのエスケープで変換されているのでそれを元に戻す
+                            data = data.replace(/&#034;/g,'"');
+                            var jsonString = data.replace(/^\s+|\s+$/g, "");
+                            var jsonString = jsonString.replace(/\r?\n/g,"");
+                            var jsonString = jsonString.replace(/\\'/g, "'");
+
+                            //json型に変換する
+                            var json_obj = JSON.parse(jsonString);
+                            //alert(json_obj.shukei[0].shukeiValue);
+                            //実際のappend処理
+
+                            $(".lessonName").text("レッスン名");
+                            $(".zyukobi").text("受講回数");
+                            $(".IRName").remove();
+                            $(".kaizyo").remove();
+                            $(".lessonData").remove();
+                            $('.summeryInstructor').css('pointer-events', 'none');
+                            $('.summeryInstructor').css('font-color', 'gray');
+
+                            for (var i = 0; i < json_obj.shukei.length; i++) {
+                                    //$(".lessonName").prepend("<tr>");
+                                    $(".rowDisplayedData").append("<tr><td class='lessonName'>" + json_obj.shukei[i].shukeiName + "</td><td class='zyukobi'>"
+                                                                                                + json_obj.shukei[i].shukeiValue+ "回</td></tr>");
+                                    //$(".zyukobi").append("</tr>");
+
+                            }
+
+
+
+
+
+                        })
+                        .fail(function( data ) {
+                            alert("通信失敗");
+                                // ...
+                        })
+                        .always(function( data ) {
+                                // ...
+                            alert("通信いつもの");
+                            //alert(data);
+
+                        });
+
+                    });
+                    //Ajax後の処理？
+
+
+                });
+            </script>
+
+
 
             <!-- /.row -->
             <div class="row">
@@ -655,7 +726,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                     <ul class="dropdown-menu pull-right" role="menu">
                                         <li><a class="summeryInstructor" href="#">月ごとのレッスン回数</a>
                                         </li>
-                                        <li><a href="#">Another action</a>
+                                        <li><a class="summeryLesson" href="#">レッスンごとの受講回数</a>
                                         </li>
                                         <li><a href="#">Something else here</a>
                                         </li>
