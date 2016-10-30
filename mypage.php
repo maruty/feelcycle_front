@@ -735,11 +735,22 @@ var_dump($shukeiObject);
                                             <p>
 
                                               <?php
+
+                                              foreach ( $shukeiObject as $key=>$val){
+                                                  foreach ( $val as $key2=>$val2){
+                                                    if($key2['shukeiName'] === "MaxLessoname"){
+                                                        echo $val2['shukeiValue'];
+                                                    }
+                                                  }
+                                              }
+
+                                                    /*
                                                     foreach ($shukeiObject as $id => $rec) {
                                                         if($rec['shukeiName'] === "MaxLessoname"){
                                                             echo $rec['shukeiValue'];
                                                         }
                                                     }
+                                                    */
                                                 ?>
 
 
