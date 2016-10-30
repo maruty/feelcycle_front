@@ -737,7 +737,9 @@ var_dump($shukeiObject);
                                               <?php
 
                                               foreach ($shukeiObject as $key1 => $value1) {
+                                                print $key1;
                                                 foreach ($value1 as $key2 => $value2) {
+                                                    print "key2" . $key2;
                                                     print $value2 . ", "; //「.」は文字列連結
                                                 }
                                               }
