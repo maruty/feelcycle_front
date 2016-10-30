@@ -619,12 +619,12 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
                         })
                         .fail(function( data ) {
-                            //alert("通信失敗");
+                            alert("通信失敗");
                                 // ...
                         })
                         .always(function( data ) {
                                 // ...
-                            //alert("通信いつもの");
+                            alert("通信いつもの");
                             //alert(data);
 
                         });
