@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 //ini_set('display_errors',1);
 //phpinfo();
@@ -58,10 +58,10 @@ session_start();
 
 <?php
 /*
-if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != "" 
+if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
     && isset($_COOKIE["loginId"]) && $_COOKIE["loginId"] != ""
     && isset($_COOKIE["loginPass"]) && $_COOKIE["loginPass"] != ""){
-     
+
     $_SESSION["loginStatus"] = $_COOKIE["loginStatus"];
     $_SESSION["loginId"] = $_COOKIE["loginId"];
     $_SESSION["loginPass"] = $_COOKIE["loginPass"];
@@ -72,7 +72,7 @@ if(isset($_COOKIE["loginStatus"]) && $_COOKIE["loginStatus"] != ""
 
 $FINAL_URL_STRING = "http://133.242.235.62:8080/feelcyclebatch/apiRegist/";
 $FINAL_GET_LESSION = "Lesson?";
-$FINAL_GET_USERDATA = "UserData?"; 
+$FINAL_GET_USERDATA = "UserData?";
 $FINAL_GET_MONTHLY = "LessonMonthlyData?";
 $FINAL_GET_SHUKEI = "shukeiData?";
 
@@ -197,6 +197,13 @@ $responseShukeiData = str_replace('&#034;', '"', $response);
 //monthlyCountが配列
 $shukeiObject = json_decode( $responseShukeiData ,true);
 
+      foreach ($shukeiObject as $id => $rec) {
+          if($rec['shukeiName'] === "MaxLessoname"){
+              echo "test" . $rec['shukeiValue'];
+          }
+      }
+
+
 
 //var_dump($shukeiObject);
 
@@ -224,7 +231,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
             <ul class="nav navbar-top-links navbar-right">
                 <!--
                 <li class="dropdown">
-              
+
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
@@ -274,7 +281,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                         </li>
                     </ul>
 
-                  
+
                 </li> -->
                 <!-- /.dropdown -->
                 <!--
@@ -354,7 +361,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             </a>
                         </li>
                     </ul>
-                    
+
                 </li>
                     -->
                 <!-- /.dropdown -->
@@ -468,7 +475,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                       
+
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -496,14 +503,14 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                 <div class="col-xs-3">
                                     <i class="fa fa-comments fa-5x"></i>
                                 </div>
-                                
+
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">26</div>
                                     <div>New Comments!</div>
                                 </div>
 
                             </div>
-                          
+
                         </div>
 
                         <a href="#">
@@ -514,7 +521,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                             </div>
                         </a>
                     </div>
-                       
+
                 </div>
                  -->
 
@@ -611,7 +618,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                     $(".rowDisplayedData").append("<tr><td class='lessonName'>" + json_obj.shukei[i].shukeiName + "</td><td class='zyukobi'>"
                                                                                                 + json_obj.shukei[i].shukeiValue+ "回</td></tr>");
                                     //$(".zyukobi").append("</tr>");
-                                    
+
                             }
 
 
@@ -682,7 +689,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                 </tr>
                                             </thead>
                                             <tbody class="rowDisplayedData">
-                                                
+
                                               <?php
                                                     $count = 0;
                                                     foreach ($lessonObject as $id => $rec) {
@@ -697,7 +704,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                         //}
                                                         //$count++;
                                                     }
-                                                    ?> 
+                                                    ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -734,14 +741,14 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
 
                                             <p>
-                                                
+
                                               <?php
                                                     foreach ($shukeiObject as $id => $rec) {
                                                         if($rec['shukeiName'] === "MaxLessoname"){
                                                             echo $rec['shukeiValue'];
                                                         }
                                                     }
-                                                ?> 
+                                                ?>
 
 
 
@@ -770,7 +777,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
                                                             echo $rec['shukeiValue'];
                                                         }
                                                     }
-                                                ?> 
+                                                ?>
                                             </p>
                                         </div>
                                     </div>
@@ -833,7 +840,7 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 */
     </script>
 
-    
+
 
 
 
@@ -843,5 +850,5 @@ $shukeiObject = json_decode( $responseShukeiData ,true);
 
 <?php else : ?>
     <p>直アクセスはダメよ</p>
-       
+
 <?php endif; ?>
