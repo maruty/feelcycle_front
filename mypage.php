@@ -739,8 +739,10 @@ var_dump($shukeiObject);
                                               foreach ($shukeiObject as $key1 => $value1) {
                                                 print $key1;
                                                 foreach ($value1 as $key2 => $value2) {
-                                                    print "key2" . $key2;
-                                                    print $value2['shukeiValue'] . ", "; //「.」は文字列連結
+                                                    if($value2['shukeiName']=== "MaxLessoname"){
+                                                      print $value2['shukeiValue'];
+                                                    }
+
                                                 }
                                               }
 
@@ -775,11 +777,23 @@ var_dump($shukeiObject);
 
                                             <p>
                                               <?php
+
+                                              foreach ($shukeiObject as $key1 => $value1) {
+                                                print $key1;
+                                                foreach ($value1 as $key2 => $value2) {
+                                                    if($value2['shukeiName']=== "MaxInstroctor"){
+                                                      print $value2['shukeiValue'];
+                                                    }
+
+                                                }
+                                              }
+                                              /*
                                                     foreach ($shukeiObject as $id => $rec) {
                                                         if($rec['shukeiName'] === "MaxInstroctor"){
                                                             echo $rec['shukeiValue'];
                                                         }
                                                     }
+                                                    */
                                                 ?>
                                             </p>
                                         </div>
