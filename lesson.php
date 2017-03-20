@@ -182,8 +182,8 @@
       $(function() {
 
         jQuery(document).ready(function() {
-          $('[name="b_tenpo"]').show();
-          $('[name="b_time"]').show();
+          $('[name="b_tenpo"]').hide();
+          $('[name="b_time"]').hide();
         });
 
         //ラジオボタンをチェックしたら発動
