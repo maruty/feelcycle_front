@@ -126,6 +126,7 @@
                                     <option value='AOYAMA'>AOYAMA</option>
                                     <option value='EBISU'>EBISU</option>
                                     <option value='SHINJUKU'>SHINJUKU</option>
+                                  </select>
                                 </div>
 
 
@@ -145,6 +146,7 @@
                                     <option value='19:20'>19:20</option>
                                     <option value='20:35'>21:30</option>
                                     <option value='21:50'>21:50</option>
+                                  </select>
                                 </div>
 
 
