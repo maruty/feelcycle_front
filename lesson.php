@@ -25,7 +25,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Feel 俺俺取得</title>
+    <title>Feel Cycleとb-monsterの俺俺取得</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -60,6 +60,14 @@
                     <div class="panel-body">
                         <form role="form" method="post" action="./lesson_controller.php" >
                             <fieldset>
+
+
+                                <div class="form-group">
+                                  <input type="radio" name="gym" value="1" checked="checked">feelcycle
+                                  <input type="radio" name="gym" value="2">b-monster
+                                </div>
+
+
                                 <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="loginId" type="email" autofocus>
                                 </div>
@@ -67,7 +75,7 @@
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="9/19(月)かっこは半角" name="date" type="text" value="">
+                                    <input class="form-control" placeholder="b-monsterは3月21日・(火)的な・・・FCは9/19(月)かっこは半角" name="date" type="text" value="">
                                 </div>
                                 <?php
                                 /*
@@ -80,7 +88,7 @@
                                       foreach ($value1 as $key2 => $value2) {
                                         print $value2 . ", "; //「.」は文字列連結
                                       }
-                                
+
 
                                 */
                                     $count = 0;
