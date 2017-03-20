@@ -189,7 +189,7 @@
             //
             $('[name="lesson"]').show();
             $('[name="time"]').show();
-            $('[name="b_tempo"]').hide();
+            $('[name="b_tenpo"]').hide();
             $('[name="b_time"]').hide();
 
           }
@@ -197,7 +197,7 @@
             //2の場合はb-monster なのでプログラムをhide 店舗をhideしてb-monster用の表示に 時間もb-monster用の表示にする
             $('[name="lesson"]').hide();
             $('[name="time"]').hide();
-            $('[name="b_tempo"]').show();
+            $('[name="b_tenpo"]').show();
             $('[name="b_time"]').show();
 
           }
