@@ -120,6 +120,36 @@
                                     }
 
                                 ?>
+                                <div "form-group">
+                                  <select name='b_tenpo' class='form-control'>
+                                    <option value='GINZA'>GINZA</option>
+                                    <option value='AOYAMA'>AOYAMA</option>
+                                    <option value='EBISU'>EBISU</option>
+                                    <option value='SHINJUKU'>SHINJUKU</option>
+                                </div>
+
+
+                                <!-- b-monster用の設定-->
+                                <div "form-group">
+                                  <select name='b_time' class='form-control'>
+                                    <option value='07:00'>07:00</option>
+                                    <option value='08:05'>08:05</option>
+                                    <option value='09:20'>09:20</option>
+                                    <option value='10:35'>10:35</option>
+                                    <option value='11:50'>11:50</option>
+                                    <option value='13:05'>13:05</option>
+                                    <option value='14:20'>14:20</option>
+                                    <option value='15:35'>15:35</option>
+                                    <option value='16:50'>16:50</option>
+                                    <option value='18:05'>18:05</option>
+                                    <option value='19:20'>19:20</option>
+                                    <option value='20:35'>21:30</option>
+                                    <option value='21:50'>21:50</option>
+                                </div>
+
+
+
+
                                  <input type="submit" value="レッスンを取得する" class="btn btn-lg btn-success btn-block">
 
                             </fieldset>
@@ -156,18 +186,24 @@
           var val = $(this).val();
 
           if(val == 1 ){
-            //初期値表示に関してはfcの状態になっているので特に何もしない
+            //
+            $('[name="lesson"]').show();
+            $('[name="time"]').show();
+            $('[name="b_tempo"]').hide();
+            $('[name="b_time"]').hide();
 
           }
           if(val == 2) {
             //2の場合はb-monster なのでプログラムをhide 店舗をhideしてb-monster用の表示に 時間もb-monster用の表示にする
             $('[name="lesson"]').hide();
             $('[name="time"]').hide();
+            $('[name="b_tempo"]').show();
+            $('[name="b_time"]').show();
 
           }
 
           //選択したvalue値をp要素に出力
-          $('p').text(val);
+          ///$('p').text(val);
         });
       });
     </script>
