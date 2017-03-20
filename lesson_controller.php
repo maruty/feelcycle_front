@@ -7,6 +7,7 @@
     //fcの場合
     if($_POST["gym"] =="1"){
       $array = array(
+          "gym" => $_POST["gym"],
           "userId" => $_POST["loginId"],
           "userPass" => $_POST["loginPass"],
           "lessonName" => $_POST["lesson"] ,
@@ -19,6 +20,7 @@
     //b-monsterの場合
     if($_POST["gym"] =="2"){
       $array = array(
+          "gym" => $_POST["gym"],
           "userId" => $_POST["loginId"],
           "userPass" => $_POST["loginPass"],
           "lessonName" => "none" ,
