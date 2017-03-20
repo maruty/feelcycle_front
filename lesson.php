@@ -75,7 +75,7 @@
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="b-monsterは3月21日・(火)的な・・・FCは9/19(月)かっこは半角" name="date" type="text" value="">
+                                    <input class="form-control" placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="text" value="">
                                 </div>
                                 <?php
                                 /*
@@ -129,6 +129,32 @@
             </div>
         </div>
     </div>
+
+    <script>
+      $(function() {
+
+        //ラジオボタンをチェックしたら発動
+        $('input[type="radio"]').change(function() {
+
+          //選択したvalue値を変数に格納
+          var val = $(this).val();
+
+          if(val == 1 ){
+            //初期値表示に関してはfcの状態になっているので特に何もしない
+
+          }
+          if(val == 2) {
+            //2の場合はb-monster なのでプログラムをhide 店舗をhideしてb-monster用の表示に 時間もb-monster用の表示にする
+            $('[name="lesson"]').hide();
+            $('[name="time"]').hide();
+
+          }
+
+          //選択したvalue値をp要素に出力
+          $('p').text(val);
+        });
+      });
+    </script>
 
     <!-- jQuery -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
