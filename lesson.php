@@ -196,6 +196,7 @@
             //
             $('[name="lesson"]').show();
             $('[name="time"]').show();
+            $('[name="tenpo"]').show();
             $('[name="b_tenpo"]').hide();
             $('[name="b_time"]').hide();
 
