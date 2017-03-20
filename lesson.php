@@ -120,7 +120,7 @@
                                     }
 
                                 ?>
-                                <div "form-group">
+                                <div class="form-group">
                                   <select name='b_tenpo' class='form-control'>
                                     <option value='GINZA'>GINZA</option>
                                     <option value='AOYAMA'>AOYAMA</option>
@@ -131,7 +131,7 @@
 
 
                                 <!-- b-monster用の設定-->
-                                <div "form-group">
+                                <div class="form-group">
                                   <select name='b_time' class='form-control'>
                                     <option value='07:00'>07:00</option>
                                     <option value='08:05'>08:05</option>
@@ -180,6 +180,11 @@
 
     <script>
       $(function() {
+
+        jQuery(document).ready(function() {
+          $('[name="b_tenpo"]').show();
+          $('[name="b_time"]').show();
+        });
 
         //ラジオボタンをチェックしたら発動
         $('input[type="radio"]').change(function() {
