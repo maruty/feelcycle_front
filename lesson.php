@@ -39,10 +39,8 @@
     <!-- Custom Fonts -->
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <script src="https://unpkg.com/flatpickr"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,6 +48,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+      $("#datapicker").flatpickr(optional_config);
+    </script>
 
 
 
@@ -82,7 +84,7 @@
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="datepicker" placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="text" value="">
+                                    <input class="form-control" id="datapicker" placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="text" value="">
                                 </div>
                                 <?php
                                 /*
@@ -222,12 +224,6 @@
           ///$('p').text(val);
         });
       });
-    </script>
-
-    <script>
-    $( function() {
-        $( "#datepicker" ).datepicker();
-    } );
     </script>
 
 
