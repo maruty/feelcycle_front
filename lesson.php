@@ -52,7 +52,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
-      $("#datapicker").flatpickr();
+      $("input[name=date]").flatpickr();
     </script>
 
 
@@ -86,7 +86,7 @@
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="datapicker" placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="text" value="">
+                                    <input class="form-control"  placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="text" value="">
                                 </div>
                                 <?php
                                 /*
