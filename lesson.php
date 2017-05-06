@@ -51,10 +51,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script>
-      $("input[name=date]").flatpickr();
-    </script>
-
 
 
 </head>
@@ -191,6 +187,8 @@
 
     <script>
       $(function() {
+
+        $("input[name=date]").flatpickr();
 
         jQuery(document).ready(function() {
           $('[name="b_tenpo"]').hide();
