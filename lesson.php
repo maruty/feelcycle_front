@@ -52,10 +52,9 @@
     <![endif]-->
 
     <script>
-    	$(function() {
-    		$.datepicker.setDefaults($.datepicker.regional["ja"]);
-    		$("#datepicker").datepicker();
-    	});
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
     </script>
 
 </head>
