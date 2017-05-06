@@ -5,20 +5,12 @@
         throw new \RuntimeException('file not found.');
     }
     $dataLessonMaster = json_decode($json, true);
-
     //var_dump($dataLessonMaster);
-
-
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,8 +31,6 @@
     <!-- Custom Fonts -->
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
-    <script src="https://unpkg.com/flatpickr"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
