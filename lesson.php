@@ -181,12 +181,12 @@
         if(!input){
           if(radioVal == 1){
             //feelcycle  5/7(日)
-            alery("feel:" + input);
+            alert("feel:" + input);
 
 
           }else{
             //bmonster
-            alery("b-monster:" + input);
+            alert("b-monster:" + input);
           }
         }
 
