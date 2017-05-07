@@ -188,7 +188,7 @@
           //配列で格納される
           alert("ここきた2");
           dateArray = datestr.split("/");
-          var dateObj = new Date(ateArray[0],dateArray[1],dateArray[2]);
+          var dateObj = new Date(dateArray[0],dateArray[1],dateArray[2]);
           var y = dateObj.getFullYear();
           var m = dateObj.getMonth() + 1;
           var d = dateObj.getDate();
