@@ -166,12 +166,23 @@
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="./bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <!-- カレンダーライブラリ -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
 
     <!-- Custom Theme JavaScript -->
     <script src="./dist/js/sb-admin-2.js"></script>
 
     <!--　日付フォーマット改修 -->
     <script>
+    $('#datepick').datepicker();
+    </script>
+
+
+
+    <script>
+    /*
     $("#datepick").change(function () {
     var datestr = $("#datepick").val();
     var radioVal = $("input[name='gym']:checked").val();
@@ -181,13 +192,12 @@
         $("#datepick").val("5月1日");
         alert("feel:" + $("#datepick").val());
       }else{
-        //alert("b-monster:" + datestr)
       }
     }
 
     });
 
-
+    */
 
     /*
     $('#datepick').change(checkChange(this));
