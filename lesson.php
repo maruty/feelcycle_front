@@ -188,11 +188,18 @@
           //配列で格納される
           alert("ここきた2");
           dateArray = datestr.split("/");
+          var dateObj = new Date(ateArray[0],dateArray[1],dateArray[2]);
           if(radioVal == 1){
             //5/7(日)
-            alert("ここきた3");
-            $("#datepick").val(formatDate(new Date(ateArray[0],dateArray[1],dateArray[2]), 'MM/DD(%w%)'));
-            alert("feel:" + $("#datepick").val());
+
+              format_str = 'MM/DD(%w%)';
+              format_str = format_str.replace(/MM/g, dateObj.getMonth());
+              format_str = format_str.replace(/DD/g, dateObj.getDate());
+              format_str = format_str.replace(/w/g, dateObj.getDate());
+
+
+            $("#datepick").val(format_str);
+
           }else{
           }
         }
