@@ -185,8 +185,9 @@
         if(datestr){
           //配列で格納される
           dateArray = datestr.split("/");
-          alert(dateArray[0] + (dateArray[1] -1));
+          //Date型のmonthは0からはじまるので -1をする
           var dateObj = new Date(dateArray[0],(dateArray[1]-1),dateArray[2]);
+          //曜日は配列で返すので定義しておく
           var week = ['日', '月', '火', '水', '木', '金', '土'];
           var y = dateObj.getFullYear();
           var m = dateObj.getMonth() + 1;
@@ -207,54 +208,6 @@
 
 
     </script>
-
-
-
-    <script>
-    /*
-    $("#datepick").change(function () {
-    var datestr = $("#datepick").val();
-    var radioVal = $("input[name='gym']:checked").val();
-
-    if(datestr){
-      if(radioVal == 1){
-        $("#datepick").val("5月1日");
-        alert("feel:" + $("#datepick").val());
-      }else{
-      }
-    }
-
-    });
-
-    */
-
-    /*
-    $('#datepick').change(checkChange(this));
-
-    function checkChange(e){
-        var input = v=$(e).find('#datepick').val();
-        var radioVal = $("input[name='gym']:checked").val();
-
-        alert(input);
-
-        if(!input){
-          if(radioVal == 1){
-            //feelcycle  5/7(日)
-            alert("feel:" + input);
-
-
-          }else{
-            //bmonster
-            alert("b-monster:" + input);
-          }
-        }
-
-    }
-    */
-
-    </script>
-
-
 
     <!-- bmonster改修-->
 
