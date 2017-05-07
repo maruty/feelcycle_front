@@ -189,6 +189,7 @@
           alert("ここきた2");
           dateArray = datestr.split("/");
           var dateObj = new Date(dateArray[0],dateArray[1],dateArray[2]);
+          var week = ['日', '月', '火', '水', '木', '金', '土'];
           var y = dateObj.getFullYear();
           var m = dateObj.getMonth() + 1;
           var d = dateObj.getDate();
@@ -196,10 +197,10 @@
           if(radioVal == 1){
             //5/7(日)
 
-            $("#datepick").val(m + "/" + d + "(" + w + ")");
+            $("#datepick").val(m + "/" + d + "(" + week[w] + ")");
 
           }else{
-            $("#datepick").val(m + "月" + d + "日(" + w + ")");
+            $("#datepick").val(m + "月" + d + "日(" + week[w] + ")");
 
           }
         }
