@@ -178,12 +178,12 @@
 
     if(datestr){
       if(radioVal == 1){
+        $("#datepick").val("5月1日");
         alert("feel:" + datestr)
       }else{
-        alert("b-monster:" + datestr)
+        //alert("b-monster:" + datestr)
       }
     }
-
 
     });
 
