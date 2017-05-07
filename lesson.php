@@ -176,7 +176,7 @@
     var datestr = $("#datepick").val();
     var radioVal = $("input[name='gym']:checked").val();
 
-    if(!datestr){
+    if(datestr){
       if(radioVal == 1){
         alert("feel:" + datestr)
       }else{
