@@ -178,6 +178,8 @@
         var input = v=$(e).find('#datepick').val();
         var radioVal = $("input[name='gym']:checked").val();
 
+        alert(input);
+
         if(!input){
           if(radioVal == 1){
             //feelcycle  5/7(日)
