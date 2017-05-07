@@ -182,11 +182,8 @@
         var datestr = $("#datepick").val();
         var radioVal = $("input[name='gym']:checked").val();
 
-        alert("ここきた1");
-
         if(datestr){
           //配列で格納される
-          alert("ここきた2");
           dateArray = datestr.split("/");
           var dateObj = new Date(dateArray[0],dateArray[1],dateArray[2]);
           var week = ['日', '月', '火', '水', '木', '金', '土'];
