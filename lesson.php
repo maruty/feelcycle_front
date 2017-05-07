@@ -176,7 +176,7 @@
 
     function checkChange(e){
         var input = v=$(e).find('#datepick').val();
-        var radioVal = $("input[type="radio"]:checked").val();
+        var radioVal = $("input[name='gym']:checked").val();
 
         if(!old){
           if(radioVal == 1){
