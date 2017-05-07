@@ -69,7 +69,7 @@
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control"  placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="date" value="">
+                                    <input class="form-control"  id="datepick" placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="date" value="">
                                 </div>
                                 <?php
                                 /*
@@ -169,6 +169,32 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="./dist/js/sb-admin-2.js"></script>
+
+    <!--　日付フォーマット改修 -->
+    <script>
+    $('#datepick').keyup(checkChange(this));
+
+    function checkChange(e){
+        var input = v=$(e).find('#datepick').val();
+        var radioVal = $("input[type="radio"]:checked").val();
+
+        if(!old){
+          if(radioVal == 1){
+            //feelcycle  5/7(日)
+            alery("feel:" + input);
+
+
+          }else{
+            //bmonster
+            alery("b-monster:" + input);
+          }
+        }
+
+    }
+
+    </script>
+
+
 
     <!-- bmonster改修-->
 
