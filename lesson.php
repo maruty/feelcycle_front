@@ -188,7 +188,7 @@
           var dateObj = new Date(dateArray[0],dateArray[1],dateArray[2]);
           var week = ['日', '月', '火', '水', '木', '金', '土'];
           var y = dateObj.getFullYear();
-          var m = dateObj.getMonth() + 1;
+          var m = dateObj.getMonth();
           var d = dateObj.getDate();
           var w = dateObj.getDay();
           if(radioVal == 1){
