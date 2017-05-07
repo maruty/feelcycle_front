@@ -182,14 +182,15 @@
         var datestr = $("#datepick").val();
         var radioVal = $("input[name='gym']:checked").val();
 
-
+        alert("ここきた1");
 
         if(datestr){
           //配列で格納される
+          alert("ここきた2");
           dateArray = datestr.split("/");
-
           if(radioVal == 1){
             //5/7(日)
+            alert("ここきた3");
             $("#datepick").val(formatDate(new Date(ateArray[0],dateArray[1],dateArray[2]), 'MM/DD(%w%)'));
             alert("feel:" + $("#datepick").val());
           }else{
