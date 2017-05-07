@@ -172,7 +172,7 @@
 
     <!--　日付フォーマット改修 -->
     <script>
-    $('#datepick').keyup(checkChange(this));
+    $('#datepick').change(checkChange(this));
 
     function checkChange(e){
         var input = v=$(e).find('#datepick').val();
