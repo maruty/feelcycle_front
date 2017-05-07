@@ -185,6 +185,7 @@
         if(datestr){
           //配列で格納される
           dateArray = datestr.split("/");
+          alert(dateArray[0] + (dateArray[1] -1));
           var dateObj = new Date(dateArray[0],(dateArray[1]-1),dateArray[2]);
           var week = ['日', '月', '火', '水', '木', '金', '土'];
           var y = dateObj.getFullYear();
