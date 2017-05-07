@@ -173,9 +173,16 @@
     <!--　日付フォーマット改修 -->
     <script>
     $("#datepick").change(function () {
-    var str = "";
-    str = $(this).val();
-    alert(str);
+    var datestr = $("#datepick").val();
+    var radioVal = $("input[name='gym']:checked").val();
+
+    if(!datestr){
+      if(radioVal == 1){
+        alert("feel:" + datestr)
+      }else{
+        alert("b-monster:" + datestr)
+      }
+    }
 
 
     });
