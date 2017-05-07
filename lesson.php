@@ -172,6 +172,17 @@
 
     <!--　日付フォーマット改修 -->
     <script>
+    $("#datepick.input").change(function () {
+    var str = "";
+    str = $(this).val();
+    alert(str);
+
+
+    });
+
+
+
+    /*
     $('#datepick').change(checkChange(this));
 
     function checkChange(e){
@@ -193,6 +204,7 @@
         }
 
     }
+    */
 
     </script>
 
