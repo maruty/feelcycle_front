@@ -177,15 +177,21 @@
     <!--　日付フォーマット改修 -->
     <script>
       $('#datepick').datepicker();
-      var radioVal = $("input[name='gym']:checked").val();
-      var datestr = $("#datepick").val();
-      if(datestr){
-        if(radioVal == 1){
-          $("#datepick").val("5月1日");
-          alert("feel:" + $("#datepick").val());
-        }else{
+
+      $("#datepick").change(function () {
+        var datestr = $("#datepick").val();
+        var radioVal = $("input[name='gym']:checked").val();
+
+        if(datestr){
+          if(radioVal == 1){
+            $("#datepick").val("5月1日");
+            alert("feel:" + $("#datepick").val());
+          }else{
+          }
         }
-      }
+
+      });
+
 
     </script>
 
