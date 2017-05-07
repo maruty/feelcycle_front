@@ -172,7 +172,7 @@
 
     <!--　日付フォーマット改修 -->
     <script>
-    $("#datepick.input").change(function () {
+    $("#datepick").change(function () {
     var str = "";
     str = $(this).val();
     alert(str);
