@@ -69,7 +69,7 @@
                                     <input class="form-control" placeholder="Password" name="loginPass" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="datepicker" placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="text" value="">
+                                    <input class="form-control"  placeholder="b-monは3月21日・(火)的な・FCは9/19(月)かっこは半角" name="date" type="date" value="">
                                 </div>
                                 <?php
                                 /*
@@ -210,13 +210,6 @@
           ///$('p').text(val);
         });
       });
-    </script>
-
-    <!--カレンダー -->
-    <script>
-    $( function() {
-      $( "#datepicker" ).datepicker();
-    } );
     </script>
 
 
