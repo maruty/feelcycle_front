@@ -49,6 +49,14 @@
         fclose($FP);
     }
 
+    //jekins ログインの情報取得
+    $jsonJenins = file_get_contents("../json/jenkins.json");
+    $jsonJenins = mb_convert_encoding($jsonJenins, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+    $arrayJenkins = json_decode($jsonJenins,true);
+
+    $jeninsId = $arrayJenkins["id"];
+    $jeninsPass = $arrayJenkins["pass"];
+
 
     //ファイルへの書き込みは終了
 
@@ -57,8 +65,9 @@
     echo "レッスン情報はサーバーに送信されました";
 
     //jenkinsのjobを起動する
-    $url = "http://133.242.235.62:8008/job/feelcycle_get_selenium/build?token=8ea577e85d1a155c9d038cae3ebf50c1";
+    $url = "http://133.242.235.62:8008/job/feelcycle_get_selenium/build?token=feelcycleBuild";
     $curl = curl_init($url); // 初期化！
+    curl_setopt($curl , CURLOPT_USERPWD, $jeninsId  . ":" . $jeninsPass);
     $result = curl_exec($curl); // リクエスト実行
     echo $result;
 
