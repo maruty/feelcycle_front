@@ -116,10 +116,11 @@
                                 ?>
                                 <div class="form-group">
                                   <select name='b_tenpo' class='form-control'>
-                                    <option value='GINZA'>GINZA</option>
-                                    <option value='AOYAMA'>AOYAMA</option>
-                                    <option value='EBISU'>EBISU</option>
-                                    <option value='SHINJUKU'>SHINJUKU</option>
+                                    <option value='0001'>GINZA</option>
+                                    <option value='0002'>AOYAMA</option>
+                                    <option value='0003'>EBISU</option>
+                                    <option value='0004'>SHINJUKU</option>
+                                    <option value='0006'>IKEBUKURO</option>
                                   </select>
                                 </div>
 
@@ -138,7 +139,7 @@
                                     <option value='16:50'>16:50</option>
                                     <option value='18:05'>18:05</option>
                                     <option value='19:20'>19:20</option>
-                                    <option value='20:35'>21:30</option>
+                                    <option value='20:35'>20:35</option>
                                     <option value='21:50'>21:50</option>
                                   </select>
                                 </div>
