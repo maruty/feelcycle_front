@@ -65,7 +65,7 @@
     echo "レッスン情報はサーバーに送信されました";
 
     //jenkinsのjobを起動する
-    $url = "http://133.242.235.62:8008/job/feelcycle_get_selenium/build?token=feelcycleBuild";
+    $url = "http://133.242.226.123:8008/job/feelcycle_get_selenium/build?token=maruty";
     $curl = curl_init($url); // 初期化！
     curl_setopt($curl , CURLOPT_USERPWD, $jeninsId  . ":" . $jeninsPass);
     $result = curl_exec($curl); // リクエスト実行
