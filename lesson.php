@@ -130,15 +130,24 @@
                                   <select name='b_time' class='form-control'>
                                     <option value='07:00'>07:00</option>
                                     <option value='08:05'>08:05</option>
+                                    <option value='08:15'>08:15</option>
                                     <option value='09:20'>09:20</option>
+                                    <option value='09:50'>09:50</option>
                                     <option value='10:35'>10:35</option>
+                                    <option value='11:25'>11:25</option>
                                     <option value='11:50'>11:50</option>
+                                    <option value='13:00'>13:00</option>
                                     <option value='13:05'>13:05</option>
                                     <option value='14:20'>14:20</option>
+                                    <option value='14:35'>14:35</option>
                                     <option value='15:35'>15:35</option>
+                                    <option value='16:10'>16:10</option>
                                     <option value='16:50'>16:50</option>
+                                    <option value='17:35'>17:35</option>
                                     <option value='18:05'>18:05</option>
+                                    <option value='19:00'>19:00</option>
                                     <option value='19:20'>19:20</option>
+                                    <option value='20:25'>20:25</option>
                                     <option value='20:35'>20:35</option>
                                     <option value='21:50'>21:50</option>
                                   </select>
